@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  color: #222;
+  background: #fffdf7;
+  line-height: 1.8;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 20px 56px;
+}
+
+.hero {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.site-name {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin: 16px 0;
+}
+
+.lead {
+  font-size: 1.1rem;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+video {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  margin: 20px auto;
+  border-radius: 12px;
+  background: #000;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 7em 1fr;
+  gap: 8px 16px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0;
+}

@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>阿佐ヶ谷レイディマドンナ | ファースト・ワルツ</title>
+  <meta name="description" content="阿佐ヶ谷レイディマドンナ『ファースト・ワルツ』の音源・歌詞アーカイブページです。">
+  <style>
+    :root {
+      --bg: #202020;
+      --bg-2: #2b2b2b;
+      --panel: #333333;
+      --panel-2: #3c3c3c;
+      --ink: #f7f7f7;
+      --sub: #bdbdbd;
+      --muted: #888888;
+      --line: #474747;
+      --accent: #4da3ff;
+      --accent-2: #f0cf75;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(77, 163, 255, 0.12), transparent 32rem),
+        linear-gradient(180deg, #242424 0%, var(--bg) 58%, #181818 100%);
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        sans-serif;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 36px 0 64px;
+    }
+
+    .top-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+      color: var(--sub);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      align-items: end;
+      padding: clamp(28px, 5vw, 56px);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, rgba(55, 55, 55, 0.96), rgba(33, 33, 33, 0.96)),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 18px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      top: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      border: 34px solid rgba(240, 207, 117, 0.1);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent-2);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+    }
+
+    .lead {
+      max-width: 720px;
+      margin: 20px 0 0;
+      color: var(--sub);
+      font-size: 16px;
+    }
+
+    .album-card {
+      position: relative;
+      z-index: 1;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(20, 20, 20, 0.45);
+    }
+
+    .album-label {
+      margin: 0 0 4px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .album-title {
+      margin: 0 0 16px;
+      font-size: 28px;
+      line-height: 1.25;
+      font-weight: 800;
+    }
+
+    .album-meta {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+    }
+
+    .album-meta div {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 16px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .album-meta dt {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .album-meta dd {
+      margin: 0;
+    }
+
+    .section {
+      margin-top: 44px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.3;
+    }
+
+    .note {
+      margin: 0;
+      color: var(--sub);
+      font-size: 13px;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+
+    .profile-grid dt,
+    .profile-grid dd {
+      margin: 0;
+      padding: 22px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .profile-grid dt {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      background: #303030;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .profile-grid dd {
+      background: var(--panel-2);
+    }
+
+    .profile-grid dt:nth-last-of-type(1),
+    .profile-grid dd:nth-last-of-type(1) {
+      border-bottom: 0;
+    }
+
+    .member-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .member-list li + li {
+      margin-top: 4px;
+    }
+
+    .track-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .track {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(60, 60, 60, 0.95), rgba(45, 45, 45, 0.95));
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    .track-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .track-number {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      background: #151515;
+      color: var(--accent-2);
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .track h3 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.35;
+    }
+
+    .track-title-area p {
+      margin: 4px 0 0;
+      color: var(--sub);
+      font-size: 14px;
+    }
+
+    audio {
+      display: block;
+      width: 100%;
+      margin: 0;
+    }
+
+    .track-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .track-actions a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .lyrics {
+      margin-top: 18px;
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+    }
+
+    .lyrics summary {
+      cursor: pointer;
+      color: var(--accent-2);
+      font-weight: 800;
+      user-select: none;
+    }
+
+    .lyrics pre {
+      overflow-x: auto;
+      white-space: pre-wrap;
+      margin: 14px 0 0;
+      padding: 18px;
+      border-radius: 16px;
+      background: #232323;
+      color: #efefef;
+      font-family:
+        "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        system-ui,
+        sans-serif;
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    .credit-box {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(60, 60, 60, 0.72);
+    }
+
+    .credit-box p {
+      margin: 0;
+      color: var(--sub);
+    }
+
+    .credit-box strong {
+      color: var(--ink);
+    }
+
+    footer {
+      margin-top: 42px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .site {
+        width: min(100% - 24px, 1080px);
+        padding-top: 24px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        border-radius: 22px;
+      }
+
+      .section-title {
+        display: block;
+      }
+
+      .note {
+        margin-top: 6px;
+      }
+
+      .profile-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-grid dt {
+        justify-content: flex-start;
+        padding-bottom: 6px;
+        border-bottom: 0;
+      }
+
+      .profile-grid dd {
+        padding-top: 6px;
+      }
+
+      .profile-grid dt:nth-last-of-type(1) {
+        border-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="site">
+    <a class="top-link" href="/">← hatagayatei-site top</a>
+
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Music Archive</p>
+        <h1>阿佐ヶ谷<br>レイディマドンナ</h1>
+        <p class="lead">
+          東京を拠点に活動していたバンド、阿佐ヶ谷レイディマドンナの音源アーカイブです。
+          アルバム『ファースト・ワルツ』収録曲を掲載しています。
+        </p>
+      </div>
+
+      <aside class="album-card" aria-label="アルバム情報">
+        <p class="album-label">Album</p>
+        <p class="album-title">ファースト・ワルツ</p>
+        <dl class="album-meta">
+          <div>
+            <dt>発売日</dt>
+            <dd>2011.06.26</dd>
+          </div>
+          <div>
+            <dt>レーベル</dt>
+            <dd>indies</dd>
+          </div>
+          <div>
+            <dt>収録曲</dt>
+            <dd>3曲</dd>
+          </div>
+        </dl>
+      </aside>
+    </header>
+
+    <section class="section" aria-labelledby="profile-title">
+      <div class="section-title">
+        <h2 id="profile-title">プロフィール</h2>
+      </div>
+
+      <dl class="profile-grid">
+        <dt>アーティスト名</dt>
+        <dd>阿佐ヶ谷レイディマドンナ</dd>
+
+        <dt>地域</dt>
+        <dd>東京</dd>
+
+        <dt>ジャンル</dt>
+        <dd>Blues / Pops / Rock</dd>
+
+        <dt>メンバー</dt>
+        <dd>
+          <ul class="member-list">
+            <li>高橋直規：Lead Vocals, Acoustic Guitars</li>
+            <li>皆川和義：Harmonica</li>
+            <li>友枝亮時：Electric Guitar, Acoustic Guitar</li>
+            <li>五十嵐隆太：Bass</li>
+            <li>横田繁昭：Drums</li>
+            <li>松田幹：Piano, Electric Piano（Support）</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="section" aria-labelledby="tracks-title">
+      <div class="section-title">
+        <h2 id="tracks-title">Tracks</h2>
+        <p class="note">MP3は <code>tracks</code> フォルダに置く想定です。</p>
+      </div>
+
+      <section class="track-list" aria-label="楽曲一覧">
+        <!--
+          MP3は以下の場所に置く想定です。
+          music/asagayaladymadonna/tracks/
+
+          想定ファイル名：
+          01-last-waltz.mp3
+          02-hey-girl.mp3
+          03-gunjouiro-no-sekai.mp3
+
+          実際のファイル名が異なる場合は、source src と download href を書き換えてください。
+        -->
+
+      <article class="track" id="track-01">
+        <div class="track-head">
+          <div class="track-number">01</div>
+          <div class="track-title-area">
+            <h3>ラストワルツ</h3>
+            <p>作詞・作曲：高橋直規 ／ 編曲：阿佐ヶ谷レイディマドンナ</p>
+          </div>
+        </div>
+
+        <audio controls preload="metadata">
+          <source src="./tracks/01-last-waltz.mp3" type="audio/mpeg">
+          お使いのブラウザは音声再生に対応していません。
+        </audio>
+
+        <div class="track-actions">
+          <a href="./tracks/01-last-waltz.mp3" download>MP3をダウンロード</a>
+        </div>
+
+        <details class="lyrics">
+          <summary>歌詞を表示</summary>
+          <pre>夕焼け過ぎの２つの影
+かじかむ指をひとつに合わせ
+静寂に染まる街の景色は
+その温もりで色をつける
+
+宵闇に包まれても 繋いだ手はずっと離さないで
+いつか哀しみさえも ２人のなかに溶けていくから
+
+あなたのこと想うだけで
+淋しさに染まる日も温もりを感じられるから
+あなたが傍にいるだけで
+いつか見た夢でさえも 色褪せず輝き出すから
+もう何も恐れない 僕はそれを愛と呼ぼう
+
+街灯に揺れる２つの影
+
+時折そっとひとつに合わさって
+まるで昔から分かっていたみたいに
+その距離が僕の世界になる
+
+暗闇に包まれても どうかずっと傍から離れないで
+いつか消えてく過去も ２人のなかで色付くから
+
+あなたの鼓動感じるだけで
+切なさに震える日も温もりを信じられるから
+あなたの瞳を覗くだけで
+これからの色づく景色を２人で見たいと願うから
+もう何も恐れない 僕はそれを愛と呼ぼう
+
+まわり続ける世界 ずっと２人踊り続けよう
+幕が下りるその時まで 踊り続けよう 踊り続けよう
+
+あなたの名を呼ぶだけで
+これまでのすべてのことを良かったと思えるから
+あなたがただ笑うだけで
+これからのすべての時を２人でいたいと願うから
+
+あなたの名を呼ぶだけで
+これ以上大切なものは他にはないと気付いたから
+あなたがただ笑うだけで
+いつまでもいつまでも２人でいたいと願うから
+
+もう何も恐れない 僕はそれを愛と呼ぼう</pre>
+        </details>
+      </article>
+
+      <article class="track" id="track-02">
+        <div class="track-head">
+          <div class="track-number">02</div>
+          <div class="track-title-area">
+            <h3>ヘイ、ガール</h3>
+            <p>作詞・作曲：高橋直規 ／ 編曲：阿佐ヶ谷レイディマドンナ</p>
+          </div>
+        </div>
+
+        <audio controls preload="metadata">
+          <source src="./tracks/02-hey-girl.mp3" type="audio/mpeg">
+          お使いのブラウザは音声再生に対応していません。
+        </audio>
+
+        <div class="track-actions">
+          <a href="./tracks/02-hey-girl.mp3" download>MP3をダウンロード</a>
+        </div>
+
+        <details class="lyrics">
+          <summary>歌詞を表示</summary>
+          <pre>ヘイ、ガール こっちを向いてくれよ
+俺のこと もっとよく見ておくれよ
+ヘイ、ガール 君のことを想うたび
+すべての過去はどっか行っちまった
+
+ヘイ、ガール 俺が死んでしまうとき
+俺の傍で微笑んでいておくれよ
+ヘイ、ガール 君を失いそうなとき
+とてもじゃねえが夜も眠れねえ
+
+新しい日々がそこまで来てるよ
+僕はいつか消えちまうんだろう
+けど君のこと想っていたい
+
+ヘイ、ガール こっちを向いてくれよ
+君のこと 俺に守らせてくれよ
+ヘイ、ガール 君のことを想うたび
+とてもじゃねえが夜も眠れねえ
+
+新しい日々がそこまで来てるよ
+僕はいつか消えちまうんだろう
+けど君のこと想っていたい
+
+ヘイ、ガール こっちを向いてくれよ
+俺のこと もっとよく見ておくれよ
+ヘイ、ガール 君のことを想うたび
+すべての過去はどっか行っちまった
+
+ヘイ、ガール 俺が死んでしまうとき
+俺の傍で微笑んでいておくれよ
+ヘイ、ガール 君を失いそうなとき
+とてもじゃねえが夜も眠れねえ</pre>
+        </details>
+      </article>
+
+      <article class="track" id="track-03">
+        <div class="track-head">
+          <div class="track-number">03</div>
+          <div class="track-title-area">
+            <h3>群青色の世界</h3>
+            <p>作詞・作曲：高橋直規 ／ 編曲：阿佐ヶ谷レイディマドンナ</p>
+          </div>
+        </div>
+
+        <audio controls preload="metadata">
+          <source src="./tracks/03-gunjouiro-no-sekai.mp3" type="audio/mpeg">
+          お使いのブラウザは音声再生に対応していません。
+        </audio>
+
+        <div class="track-actions">
+          <a href="./tracks/03-gunjouiro-no-sekai.mp3" download>MP3をダウンロード</a>
+        </div>
+
+        <details class="lyrics">
+          <summary>歌詞を表示</summary>
+          <pre>海岸線まで続く畦道で
+石ころ蹴っ飛ばして遠くまで伸びる影
+振り向けば古びた街が
+風の中で揺れていたよ
+
+そっと手を伸ばしたら消えそうな
+遠い夏の思い出 胸に染まる夕焼け
+繰り返し響く風の音は
+二度と帰らぬ日々のことを想う
+
+雲間から落っこちてきたのはサンシャイン
+俯き加減の僕の鼓動を燃やした
+光り輝いた景色に浮かぶの何だ
+いつしか目も眩むほどに僕は明日を願うよ
+
+さらば一瞬のまたたきよ 遥か遠くまで過ぎ逝く哀しみよ
+いつかすべてが風に帰るまで すべてが灰に還るまで
+この群青色した世界で僕は生きる
+
+海岸線まで続く畦道で
+忘れたかったはずの愛しい思い出に泣いた
+気がつけば幼い日の僕が
+風の中で笑っていたよ
+
+雲間から落っこちてきたのはサンシャイン
+振り向いてばかりの僕の鼓動を燃やした
+光り輝いた景色に浮かぶの何だ
+いつしか目も眩むほどに僕は明日を願うよ
+
+さらば一瞬のまたたきよ 遥か遠くまで過ぎ逝く憧れよ
+いつかすべてが風に帰るまで すべてが灰に還るまで
+この群青色した世界で僕は生きる</pre>
+        </details>
+      </article>
+      </section>
+    </section>
+
+    <section class="section" aria-labelledby="credit-title">
+      <div class="section-title">
+        <h2 id="credit-title">Credits</h2>
+      </div>
+
+      <div class="credit-box">
+        <p>
+          全曲 <strong>作詞・作曲：高橋直規</strong> ／ <strong>編曲：阿佐ヶ谷レイディマドンナ</strong>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <small>© 阿佐ヶ谷レイディマドンナ</small>
+    </footer>
+  </main>
+</body>
+</html>

@@ -8,7 +8,6 @@
   <style>
     :root {
       --bg: #061a3a;
-      --bg-2: #092a60;
       --panel: rgba(255, 255, 255, 0.08);
       --panel-strong: rgba(255, 255, 255, 0.13);
       --ink: #f8fbff;
@@ -16,7 +15,6 @@
       --muted: #8fa4c8;
       --line: rgba(255, 255, 255, 0.18);
       --moon: #ffe84b;
-      --accent: #66b6ff;
       --shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
     }
 
@@ -59,8 +57,6 @@
 
     .top-link {
       display: inline-flex;
-      align-items: center;
-      gap: 8px;
       margin-bottom: 24px;
       color: var(--sub);
       font-size: 14px;
@@ -104,6 +100,7 @@
       border: 1px solid var(--line);
       background: #0a2e72;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.38);
+      margin: 0;
     }
 
     .cover img {
@@ -200,6 +197,10 @@
       font-size: 13px;
     }
 
+    code {
+      color: var(--moon);
+    }
+
     .album-grid {
       display: grid;
       grid-template-columns: 220px 1fr;
@@ -207,7 +208,6 @@
       border-radius: 22px;
       overflow: hidden;
       background: var(--panel);
-      backdrop-filter: blur(10px);
     }
 
     .album-grid dt,
@@ -222,7 +222,6 @@
       align-items: center;
       justify-content: flex-end;
       background: rgba(255, 255, 255, 0.06);
-      color: var(--ink);
       font-weight: 900;
     }
 
@@ -296,6 +295,10 @@
     .credit-box p {
       margin: 0;
       color: var(--sub);
+    }
+
+    .credit-box p + p {
+      margin-top: 8px;
     }
 
     .credit-box strong {
@@ -390,6 +393,12 @@
         <dt>アーティスト</dt>
         <dd>高橋直規</dd>
 
+        <dt>レーベル</dt>
+        <dd>Zarya</dd>
+
+        <dt>プロデューサー</dt>
+        <dd>馬場孝幸</dd>
+
         <dt>収録曲</dt>
         <dd>全5曲</dd>
 
@@ -401,20 +410,20 @@
     <section class="section" id="tracks" aria-labelledby="tracks-title">
       <div class="section-title">
         <h2 id="tracks-title">Tracks</h2>
-        <p class="note">MP3は <code>tracks</code> フォルダに置く想定です。ダウンロードリンクは表示していません。</p>
+        <p class="note">MP4は <code>tracks</code> フォルダに置く想定です。ダウンロードリンクは表示していません。</p>
       </div>
 
       <section class="track-list" aria-label="楽曲一覧">
         <!--
-          MP3は以下の場所に置く想定です。
+          MP4は以下の場所に置く想定です。
           music/yoru-ni-odoreba/tracks/
 
           想定ファイル名：
-          01-saraba-john.mp3
-          02-nagisa-nite.mp3
-          03-kuchibue-no-blues.mp3
-          04-kaze-ga-fuiteiru.mp3
-          05-yoru-ni-odoreba.mp3
+          01-saraba-john.mp4
+          02-nagisa-nite.mp4
+          03-kuchibue-no-blues.mp4
+          04-kaze-ga-fuiteiru.mp4
+          05-yoru-ni-odoreba.mp4
 
           実際のファイル名が異なる場合は、source src を書き換えてください。
         -->
@@ -424,83 +433,67 @@
             <div class="track-number">01</div>
             <div>
               <h3>さらばジョン</h3>
-              <p>高橋直規</p>
+              <p>作詞・作曲：高橋直規 ／ 編曲：お集まりいただいた皆さま</p>
             </div>
           </div>
           <audio controls preload="metadata">
-            <source src="./tracks/01-saraba-john.mp3" type="audio/mpeg">
+            <source src="./tracks/01-saraba-john.mp4" type="audio/mp4">
             お使いのブラウザは音声再生に対応していません。
           </audio>
         </article>
-
         <article class="track">
           <div class="track-head">
             <div class="track-number">02</div>
             <div>
               <h3>渚にて</h3>
-              <p>高橋直規</p>
+              <p>作詞・作曲：高橋直規 ／ 編曲：お集まりいただいた皆さま</p>
             </div>
           </div>
           <audio controls preload="metadata">
-            <source src="./tracks/02-nagisa-nite.mp3" type="audio/mpeg">
+            <source src="./tracks/02-nagisa-nite.mp4" type="audio/mp4">
             お使いのブラウザは音声再生に対応していません。
           </audio>
         </article>
-
         <article class="track">
           <div class="track-head">
             <div class="track-number">03</div>
             <div>
               <h3>口笛のブルース</h3>
-              <p>高橋直規</p>
+              <p>作詞・作曲：高橋直規 ／ 編曲：お集まりいただいた皆さま</p>
             </div>
           </div>
           <audio controls preload="metadata">
-            <source src="./tracks/03-kuchibue-no-blues.mp3" type="audio/mpeg">
+            <source src="./tracks/03-kuchibue-no-blues.mp4" type="audio/mp4">
             お使いのブラウザは音声再生に対応していません。
           </audio>
         </article>
-
         <article class="track">
           <div class="track-head">
             <div class="track-number">04</div>
             <div>
               <h3>風が吹いている</h3>
-              <p>高橋直規</p>
+              <p>作詞・作曲：高橋直規 ／ 編曲：お集まりいただいた皆さま</p>
             </div>
           </div>
           <audio controls preload="metadata">
-            <source src="./tracks/04-kaze-ga-fuiteiru.mp3" type="audio/mpeg">
+            <source src="./tracks/04-kaze-ga-fuiteiru.mp4" type="audio/mp4">
             お使いのブラウザは音声再生に対応していません。
           </audio>
         </article>
-
         <article class="track">
           <div class="track-head">
             <div class="track-number">05</div>
             <div>
               <h3>夜に踊れば</h3>
-              <p>高橋直規</p>
+              <p>作詞・作曲：高橋直規 ／ 編曲：お集まりいただいた皆さま</p>
             </div>
           </div>
           <audio controls preload="metadata">
-            <source src="./tracks/05-yoru-ni-odoreba.mp3" type="audio/mpeg">
+            <source src="./tracks/05-yoru-ni-odoreba.mp4" type="audio/mp4">
             お使いのブラウザは音声再生に対応していません。
           </audio>
         </article>
       </section>
-    </section>
-
-    <section class="section" aria-labelledby="credit-title">
-      <div class="section-title">
-        <h2 id="credit-title">Credits</h2>
-      </div>
-
-      <div class="credit-box">
-        <p>
-          <strong>高橋直規</strong> によるソロアルバムです。
-        </p>
-      </div>
     </section>
 
     <footer>

@@ -4,70 +4,342 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>同人誌・ZINE | 幡ヶ谷亭直吉</title>
-  <meta name="description" content="幡ヶ谷亭直吉として制作した同人誌・ZINEの一覧。技術、AI、DevOps、プロダクト、子育て、日常のこと。">
-  <link rel="stylesheet" href="/style.css">
+  <meta name="description" content="幡ヶ谷亭直吉として制作した同人誌・ZINEの一覧です。書影つきで各作品を紹介しています。">
+  <style>
+    :root {
+      --bg: #f7f3ea;
+      --paper: rgba(255, 253, 247, 0.92);
+      --ink: #1f2a35;
+      --muted: #65717e;
+      --line: rgba(126, 91, 54, 0.22);
+      --accent: #805531;
+      --accent-soft: #eee2d4;
+      --shadow: 0 14px 30px rgba(77, 63, 45, 0.08);
+      --radius: 28px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+      line-height: 1.85;
+      letter-spacing: 0.02em;
+      background:
+        linear-gradient(rgba(126, 91, 54, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126, 91, 54, 0.055) 1px, transparent 1px),
+        var(--bg);
+      background-size: 42px 42px;
+    }
+    a { color: inherit; }
+    .site {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 34px 0 56px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 72px;
+    }
+    .brand {
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+    nav a { text-decoration: none; }
+    nav a[aria-current="page"] { color: var(--accent); }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 247, 0.6);
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      margin-bottom: 22px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.45rem, 8vw, 5.4rem);
+      line-height: 1.12;
+      letter-spacing: 0.02em;
+    }
+    .lead {
+      max-width: 860px;
+      margin: 34px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 2.8vw, 1.45rem);
+      line-height: 2;
+      font-weight: 600;
+    }
+    .section { margin-top: 76px; }
+    .books {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 26px;
+    }
+    .book-card {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 28px;
+      align-items: start;
+      padding: clamp(24px, 4vw, 36px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+    .cover-wrap { width: 100%; }
+    .cover-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+      background: #fff;
+    }
+    .content { min-width: 0; }
+    .book-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 5px 13px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+    .meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+    .book-card h3 {
+      margin: 0;
+      font-size: clamp(1.55rem, 3.6vw, 2.4rem);
+      line-height: 1.22;
+      letter-spacing: 0.015em;
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--accent);
+      font-weight: 800;
+      font-size: clamp(1rem, 2vw, 1.18rem);
+    }
+    .description {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.2vw, 1.08rem);
+      font-weight: 600;
+    }
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+    .actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+    .primary {
+      color: #fff;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    .secondary {
+      color: var(--accent);
+      border: 1px solid rgba(128, 85, 49, 0.45);
+      background: rgba(255, 253, 247, 0.68);
+    }
+    footer {
+      margin-top: 86px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    @media (max-width: 860px) {
+      .site {
+        width: min(100% - 28px, 720px);
+        padding-top: 24px;
+      }
+      header {
+        display: block;
+        margin-bottom: 54px;
+      }
+      nav { margin-top: 14px; }
+      .book-card {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 24px;
+      }
+      .cover-wrap { max-width: 260px; }
+      .actions {
+        display: grid;
+      }
+      .actions a { width: 100%; }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="/"><strong>幡ヶ谷亭直吉</strong><span>Works & Activities</span></a>
-      <nav class="nav" aria-label="主要ナビゲーション">
-        <a aria-current="page" href="/doujinshi/">同人誌</a>
+  <div class="site">
+    <header>
+      <a class="brand" href="/">幡ヶ谷亭直吉 Works &amp; Activities</a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="/doujinshi/" aria-current="page">同人誌</a>
         <a href="/talks/">登壇</a>
         <a href="/communities/">コミュニティ</a>
         <a href="/music/">音楽</a>
       </nav>
-    </div>
-  </header>
-  <main>
-    <section class="hero">
-      <div>
-        <p class="eyebrow">Doujinshi / ZINE</p>
-        <h1>同人誌・ZINE</h1>
-      </div>
-      <p class="lead">制作した同人誌・ZINEの本棚です。技術、AI、DevOps、プロダクト、子育て、日常の違和感などを扱っています。</p>
-      <div class="button-row">
-        <a class="button" href="https://techbookfest.org/organization/rce3CBverTkNxBSdUFF4p6">技術書典で見る</a>
-        <a class="button secondary" href="https://hatagayatei.booth.pm/">BOOTHで見る</a>
-      </div>
-    </section>
+    </header>
 
-    <section class="section" aria-labelledby="books-heading">
-      <div class="section-header">
-        <div>
-          <p class="eyebrow">Books</p>
-          <h2 id="books-heading">作品一覧</h2>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Doujinshi / ZINE</div>
+        <h1>同人誌・ZINE</h1>
+        <p class="lead">
+          幡ヶ谷亭直吉として制作した本の一覧です。
+          各作品の書影と紹介文をまとめています。
+        </p>
+      </section>
+
+      <section class="section" aria-labelledby="books-heading">
+        <div class="books">
+
+          <article class="book-card">
+            <div class="cover-wrap">
+              <img class="cover-image" src="/doujinshi/genjitsu-karano-sukoshi-no-choyaku/cover.jpg" alt="『現実からの少しの跳躍』の書影" loading="lazy">
+            </div>
+            <div class="content">
+              <div class="book-head">
+                <span class="tag">新刊</span>
+                <p class="meta">同人誌・28ページ・紙・500円</p>
+              </div>
+              <h3>現実からの少しの跳躍</h3>
+              <p class="subtitle">極私的奇譚集</p>
+              <p class="description">2011年から2012年頃にブログへ綴っていた文章を抜粋・再編集した短篇集です。売れないミュージシャンだった頃の自分が見ていた、日常から少しだけ跳躍した風景を、一冊にまとめました。</p>
+              <div class="actions">
+                <a class="primary" href="/doujinshi/genjitsu-karano-sukoshi-no-choyaku/">作品ページを見る</a>
+                
+              </div>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="cover-wrap">
+              <img class="cover-image" src="/doujinshi/ai-foreshadowing/cover.jpg" alt="『AIという名の伏線回収』の書影" loading="lazy">
+            </div>
+            <div class="content">
+              <div class="book-head">
+                <span class="tag">新刊</span>
+                <p class="meta">同人誌・28ページ・紙/電子・500円</p>
+              </div>
+              <h3>AIという名の伏線回収</h3>
+              <p class="subtitle">極私的インターネット体験</p>
+              <p class="description">AIを「突然現れた新しいもの」としてではなく、1990年代末から続くインターネットとデジタル化の延長線上にあるものとして捉え直す、技術エッセイです。</p>
+              <div class="actions">
+                <a class="primary" href="/doujinshi/ai-foreshadowing/">作品ページを見る</a>
+                <a class="secondary" href="https://techbookfest.org/product/9DzMJxRdgBydBQK5M4pyGH">技術書典で見る</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="cover-wrap">
+              <img class="cover-image" src="/doujinshi/tsukuru-mae-ni-tsukawarekata/cover.jpg" alt="『作る前に使われ方を考える』の書影" loading="lazy">
+            </div>
+            <div class="content">
+              <div class="book-head">
+                <span class="tag">既刊</span>
+                <p class="meta">同人誌・24ページ・紙/電子・500円</p>
+              </div>
+              <h3>作る前に使われ方を考える</h3>
+              <p class="subtitle">極私的プロダクト思考</p>
+              <p class="description">エンジニアリングへのオーナーシップを取り戻すために辿り着いた「作る前に使われ方を考える」という極私的なプロダクト思考を主題とした技術同人誌です。</p>
+              <div class="actions">
+                <a class="primary" href="/doujinshi/tsukuru-mae-ni-tsukawarekata/">作品ページを見る</a>
+                <a class="secondary" href="https://techbookfest.org/product/nTcU7nrW0EtS4EsTe64Ns0">技術書典で見る</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="cover-wrap">
+              <img class="cover-image" src="/doujinshi/silo/cover.jpg" alt="『サイロを嫌う』の書影" loading="lazy">
+            </div>
+            <div class="content">
+              <div class="book-head">
+                <span class="tag">既刊</span>
+                <p class="meta">同人誌・24ページ・紙/電子・500円</p>
+              </div>
+              <h3>サイロを嫌う</h3>
+              <p class="subtitle">極私的DevOps観</p>
+              <p class="description">DevOpsの理念を手がかりに、現場に潜む「分断」（サイロ）をどう解消していくかを、極私的な視点から考察した一冊です。</p>
+              <div class="actions">
+                <a class="primary" href="/doujinshi/silo/">作品ページを見る</a>
+                <a class="secondary" href="https://techbookfest.org/product/mhnzEY6ZbGru3RXn8Y7r0b">技術書典で見る</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="cover-wrap">
+              <img class="cover-image" src="/doujinshi/penguin-frog/cover.jpg" alt="『ぺんぎんとかえる』の書影" loading="lazy">
+            </div>
+            <div class="content">
+              <div class="book-head">
+                <span class="tag">ZINE</span>
+                <p class="meta">ZINE・絵本</p>
+              </div>
+              <h3>ぺんぎんとかえる</h3>
+              
+              <p class="description">6歳の娘が折り紙に描いた絵を、一冊の本にしました。家族のなかで生まれた小さな作品を、あとから辿れる形で残しているZINEです。</p>
+              <div class="actions">
+                <a class="primary" href="/doujinshi/penguin-frog/">作品ページを見る</a>
+                
+              </div>
+            </div>
+          </article>
         </div>
-      </div>
-      <div class="grid">
-        <a class="card card-link" href="/doujinshi/penguin-frog/">
-          <div class="badges"><span class="badge">初出：ZINEフェス東京</span><span class="badge">娘との共同制作</span></div>
-          <h3>ぺんぎんとかえる／娘が折り紙に描いた絵本を形にするまで 極私的AI活用術</h3>
-          <p>6歳の娘が折り紙に描いた絵本を、一冊の本にしたZINE。</p>
-        </a>
-        <a class="card card-link" href="/doujinshi/genjitsu-karano-sukoshi-no-choyaku/">
-          <div class="badges"><span class="badge">初出：文学フリマ東京42</span><span class="badge">20代の妄想</span></div>
-          <h3>現実からの少しの跳躍 極私的奇譚集</h3>
-          <p>日常の地続きにある、少しだけ不思議なできごとを集めた極私的奇譚集。</p>
-        </a>
-        <a class="card card-link" href="/doujinshi/ai-foreshadowing/">
-          <div class="badges"><span class="badge">初出：技術書典20</span><span class="badge">インターネット体験記</span></div>
-          <h3>AIという名の伏線回収 極私的インターネット体験</h3>
-          <p>AIをインターネットとデジタル化の延長線上で捉え直す技術エッセイ。</p>
-        </a>
-        <a class="card card-link" href="/doujinshi/tsukuru-mae-ni-tsukawarekata/">
-          <div class="badges"><span class="badge">初出：技術書典19</span><span class="badge">プロダクト思考</span></div>
-          <h3>作る前に使われ方を考える 極私的プロダクト思考</h3>
-          <p>エンジニアリングへのオーナーシップを取り戻すための、極私的プロダクト思考。</p>
-        </a>
-        <a class="card card-link" href="/doujinshi/silo/">
-          <div class="badges"><span class="badge">初出：技術書典18</span><span class="badge">DevOps</span></div>
-          <h3>サイロを嫌う 極私的DevOps観</h3>
-          <p>現場に潜む分断を、DevOpsの理念から読み直した最初の技術同人誌。</p>
-        </a>
-      </div>
-    </section>
-  </main>
-  <footer class="footer"><p>© 幡ヶ谷亭直吉 / 高橋直規</p></footer>
+      </section>
+    </main>
+
+    <footer>
+      © 幡ヶ谷亭直吉 / 髙橋直規
+    </footer>
+  </div>
 </body>
 </html>

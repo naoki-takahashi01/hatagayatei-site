@@ -3,19 +3,269 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>音楽 | 幡ヶ谷亭直吉 / 高橋直規</title>
-  <meta name="description" content="高橋直規の音楽作品アーカイブ。夜に踊れば、阿佐ヶ谷レイディマドンナ。">
-  <link rel="stylesheet" href="/style.css">
+  <title>音楽 | 髙橋直規</title>
+  <meta name="description" content="髙橋直規の音楽作品アーカイブ。夜に踊れば、阿佐ヶ谷レイディマドンナ。">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <style>
+    :root {
+      --bg: #f7f3ea;
+      --paper: rgba(255, 253, 247, 0.92);
+      --ink: #1f2a35;
+      --muted: #65717e;
+      --line: rgba(126, 91, 54, 0.22);
+      --accent: #805531;
+      --accent-soft: #eee2d4;
+      --shadow: 0 14px 30px rgba(77, 63, 45, 0.08);
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+      background:
+        linear-gradient(rgba(126, 91, 54, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126, 91, 54, 0.055) 1px, transparent 1px),
+        var(--bg);
+      background-size: 42px 42px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 34px 0 56px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 70px;
+    }
+
+    .brand {
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+
+    nav a {
+      text-decoration: none;
+    }
+
+    nav a[aria-current="page"],
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      max-width: 820px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 247, 0.6);
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.35rem, 6.2vw, 4.4rem);
+      line-height: 1.18;
+      letter-spacing: 0.015em;
+    }
+
+    .lead {
+      margin: 30px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.04rem, 2.2vw, 1.26rem);
+      line-height: 1.95;
+      font-weight: 600;
+    }
+
+    .section {
+      margin-top: 64px;
+    }
+
+    .section h2 {
+      margin: 0 0 24px;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.25;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      min-height: 240px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(128, 85, 49, 0.45);
+      box-shadow: 0 18px 38px rgba(77, 63, 45, 0.12);
+    }
+
+    .tag {
+      width: fit-content;
+      padding: 5px 13px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: clamp(1.28rem, 2.1vw, 1.55rem);
+      line-height: 1.45;
+      letter-spacing: 0.02em;
+    }
+
+    .card p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+      font-weight: 600;
+      line-height: 1.9;
+    }
+
+    .cta {
+      margin-top: auto;
+      padding-top: 28px;
+      color: var(--accent);
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+
+    footer {
+      margin-top: 86px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 780px) {
+      .site {
+        width: min(100% - 28px, 720px);
+        padding-top: 24px;
+      }
+
+      header {
+        display: block;
+        margin-bottom: 54px;
+      }
+
+      nav {
+        margin-top: 14px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        min-height: auto;
+        padding: 28px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header"><div class="header-inner"><a class="brand" href="/"><strong>幡ヶ谷亭直吉</strong><span>Works & Activities</span></a><nav class="nav" aria-label="主要ナビゲーション"><a href="/doujinshi/">同人誌</a><a href="/talks/">登壇</a><a href="/communities/">コミュニティ</a><a aria-current="page" href="/music/">音楽</a></nav></div></header>
-  <main>
-    <section class="hero"><div><p class="eyebrow">Music Archive</p><h1>音楽</h1></div></section>
-    <section class="section" aria-labelledby="music-heading"><div class="section-header"><div><p class="eyebrow">Albums</p><h2 id="music-heading">作品一覧</h2></div><p>既存ページをそのまま活かし、音楽カテゴリの入口だけを追加しています。</p></div><div class="grid two">
-      <a class="card card-link" href="/music/yoru-ni-odoreba/"><div class="badges"><span class="badge">Solo Album</span></div><h3>夜に踊れば</h3><p>高橋直規のソロアルバム。</p></a>
-      <a class="card card-link" href="/music/asagayaladymadonna/"><div class="badges"><span class="badge">Band</span></div><h3>阿佐ヶ谷レイディマドンナ</h3><p>東京を拠点に活動していたバンドの音源アーカイブ。</p></a>
-    </div></section>
-  </main>
-  <footer class="footer"><p>© 幡ヶ谷亭直吉 / 高橋直規</p></footer>
+  <div class="site">
+    <header>
+      <a class="brand" href="/">髙橋直規 / 幡ヶ谷亭直吉</a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="/writing/">普段書いている場所</a>
+        <a href="/doujinshi/">同人誌</a>
+        <a href="/talks/">登壇</a>
+        <a href="/communities/">コミュニティ</a>
+        <a aria-current="page" href="/music/">音楽</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Music</div>
+        <h1>音楽</h1>
+        <p class="lead">
+          髙橋直規名義で制作・参加した音楽作品のアーカイブです。
+        </p>
+      </section>
+
+      <section class="section" aria-labelledby="music-heading">
+        <h2 id="music-heading">作品一覧</h2>
+
+        <div class="cards">
+          <a class="card" href="/music/yoru-ni-odoreba/">
+            <span class="tag">Solo Album</span>
+            <h3>夜に踊れば</h3>
+            <p>髙橋直規のソロアルバム。</p>
+            <span class="cta">見る</span>
+          </a>
+
+          <a class="card" href="/music/asagayaladymadonna/">
+            <span class="tag">Band</span>
+            <h3>阿佐ヶ谷レイディマドンナ</h3>
+            <p>髙橋直規が参加していたバンドの音源アーカイブ。</p>
+            <span class="cta">見る</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 髙橋直規 / 幡ヶ谷亭直吉
+    </footer>
+  </div>
 </body>
 </html>

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>日々のアウトプット | 幡ヶ谷亭直吉</title>
+  <meta name="description" content="幡ヶ谷亭直吉 / 髙橋直規が普段書いているX、ブログ、note、Zenn、Qiitaへのリンクです。">
+  <style>
+    :root {
+      --bg: #f7f3ea;
+      --paper: rgba(255, 253, 247, 0.92);
+      --ink: #1f2a35;
+      --muted: #65717e;
+      --line: rgba(126, 91, 54, 0.22);
+      --accent: #805531;
+      --accent-soft: #eee2d4;
+      --shadow: 0 14px 30px rgba(77, 63, 45, 0.08);
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+      background:
+        linear-gradient(rgba(126, 91, 54, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126, 91, 54, 0.055) 1px, transparent 1px),
+        var(--bg);
+      background-size: 42px 42px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 34px 0 56px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 72px;
+    }
+
+    .brand {
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+
+    nav a {
+      text-decoration: none;
+    }
+
+    nav a[aria-current="page"],
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      max-width: 840px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 247, 0.6);
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.45rem, 8vw, 5.2rem);
+      line-height: 1.12;
+      letter-spacing: 0.02em;
+    }
+
+    .lead {
+      margin: 34px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 2.8vw, 1.45rem);
+      line-height: 2;
+      font-weight: 600;
+    }
+
+    .section {
+      margin-top: 72px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      min-height: 250px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(128, 85, 49, 0.45);
+      box-shadow: 0 18px 38px rgba(77, 63, 45, 0.12);
+    }
+
+    .tag {
+      width: fit-content;
+      padding: 5px 13px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      margin-bottom: 22px;
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: clamp(1.35rem, 3vw, 1.9rem);
+      line-height: 1.35;
+    }
+
+    .card p {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .cta {
+      margin-top: auto;
+      padding-top: 30px;
+      color: var(--accent);
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+
+    footer {
+      margin-top: 86px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 760px) {
+      .site {
+        width: min(100% - 28px, 720px);
+        padding-top: 24px;
+      }
+
+      header {
+        display: block;
+        margin-bottom: 54px;
+      }
+
+      nav {
+        margin-top: 14px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        min-height: auto;
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header>
+      <a class="brand" href="/">幡ヶ谷亭直吉</a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="/outputs/" aria-current="page">日々のアウトプット</a>
+        <a href="/doujinshi/">同人誌</a>
+        <a href="/talks/">登壇</a>
+        <a href="/communities/">コミュニティ</a>
+        <a href="/music/">音楽</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Outputs</div>
+        <h1>日々のアウトプット</h1>
+      </section>
+
+      <section class="section" aria-label="主なアウトプット先">
+        <div class="cards">
+          <a class="card" href="https://x.com/asagayanaoki">
+            <span class="tag">X</span>
+            <p>近況、日々考えたことを投稿しています。</p>
+            <span class="cta">見る</span>
+          </a>
+
+          <a class="card" href="https://hiliteeternal.hatenablog.com/">
+            <span class="tag">Blog</span>
+            <h2>幡ヶ谷亭直吉ブログ</h2>
+            <p>読書や技術イベントの参加・登壇、コミュニティ運営についての学びを整理しています。</p>
+            <span class="cta">読む</span>
+          </a>
+
+          <a class="card" href="https://note.com/hiliteeternal">
+            <span class="tag">note</span>
+            <p>子育てを中心に日常からの学びを整理しています。</p>
+            <span class="cta">読む</span>
+          </a>
+
+          <a class="card" href="https://zenn.dev/takahashin">
+            <span class="tag">Zenn</span>
+            <p>開発や技術についての学びを整理しています。</p>
+            <span class="cta">読む</span>
+          </a>
+
+          <a class="card" href="https://qiita.com/hatagayatei">
+            <span class="tag">Qiita</span>
+            <p>技術メモを整理しています。</p>
+            <span class="cta">読む</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 幡ヶ谷亭直吉 / 髙橋直規
+    </footer>
+  </div>
+</body>
+</html>

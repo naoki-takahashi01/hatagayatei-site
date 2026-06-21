@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>同人誌・ZINE | 幡ヶ谷亭直吉</title>
   <meta name="description" content="幡ヶ谷亭直吉として制作した同人誌・ZINEの一覧です。書影つきで各作品を紹介しています。">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <style>
     :root {
       --bg: #f7f3ea;
@@ -17,12 +21,16 @@
       --shadow: 0 14px 30px rgba(77, 63, 45, 0.08);
       --radius: 28px;
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       color: var(--ink);
       font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
-      line-height: 1.85;
+      line-height: 1.8;
       letter-spacing: 0.02em;
       background:
         linear-gradient(rgba(126, 91, 54, 0.055) 1px, transparent 1px),
@@ -30,24 +38,31 @@
         var(--bg);
       background-size: 42px 42px;
     }
-    a { color: inherit; }
+
+    a {
+      color: inherit;
+    }
+
     .site {
-      width: min(1120px, calc(100% - 40px));
+      width: min(1080px, calc(100% - 40px));
       margin: 0 auto;
       padding: 34px 0 56px;
     }
+
     header {
       display: flex;
       justify-content: space-between;
       gap: 24px;
       align-items: center;
-      margin-bottom: 72px;
+      margin-bottom: 70px;
     }
+
     .brand {
       font-weight: 800;
       text-decoration: none;
       letter-spacing: 0.04em;
     }
+
     nav {
       display: flex;
       gap: 18px;
@@ -56,8 +71,20 @@
       font-weight: 700;
       font-size: 0.94rem;
     }
-    nav a { text-decoration: none; }
-    nav a[aria-current="page"] { color: var(--accent); }
+
+    nav a {
+      text-decoration: none;
+    }
+
+    nav a[aria-current="page"],
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      max-width: 820px;
+    }
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -66,43 +93,53 @@
       border-radius: 999px;
       background: rgba(255, 253, 247, 0.6);
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 800;
       letter-spacing: 0.06em;
       margin-bottom: 22px;
     }
+
     h1 {
       margin: 0;
-      font-size: clamp(2.45rem, 8vw, 5.4rem);
-      line-height: 1.12;
-      letter-spacing: 0.02em;
+      font-size: clamp(2.35rem, 6.2vw, 4.4rem);
+      line-height: 1.18;
+      letter-spacing: 0.015em;
     }
+
     .lead {
-      max-width: 860px;
-      margin: 34px 0 0;
+      margin: 30px 0 0;
       color: var(--muted);
-      font-size: clamp(1.08rem, 2.8vw, 1.45rem);
-      line-height: 2;
+      font-size: clamp(1.04rem, 2.2vw, 1.26rem);
+      line-height: 1.95;
       font-weight: 600;
     }
-    .section { margin-top: 76px; }
+
+    .section {
+      margin-top: 64px;
+    }
+
     .books {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 26px;
+      gap: 24px;
     }
+
     .book-card {
       display: grid;
-      grid-template-columns: 220px 1fr;
+      grid-template-columns: 210px 1fr;
       gap: 28px;
       align-items: start;
-      padding: clamp(24px, 4vw, 36px);
+      padding: clamp(24px, 4vw, 34px);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--paper);
       box-shadow: var(--shadow);
     }
-    .cover-wrap { width: 100%; }
+
+    .cover-wrap {
+      width: 100%;
+    }
+
     .cover-image {
       display: block;
       width: 100%;
@@ -112,15 +149,19 @@
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
       background: #fff;
     }
-    .content { min-width: 0; }
+
+    .content {
+      min-width: 0;
+    }
+
     .book-head {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+      gap: 12px;
       flex-wrap: wrap;
       margin-bottom: 18px;
     }
+
     .tag {
       display: inline-flex;
       align-items: center;
@@ -130,40 +171,47 @@
       border: 1px solid var(--line);
       color: var(--accent);
       background: var(--accent-soft);
-      font-size: 0.84rem;
+      font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 0.04em;
     }
+
     .meta {
       margin: 0;
       color: var(--muted);
       font-size: 0.92rem;
       font-weight: 800;
     }
-    .book-card h3 {
+
+    .book-card h2 {
       margin: 0;
-      font-size: clamp(1.55rem, 3.6vw, 2.4rem);
-      line-height: 1.22;
+      font-size: clamp(1.45rem, 2.9vw, 2.2rem);
+      line-height: 1.32;
       letter-spacing: 0.015em;
     }
+
     .subtitle {
       margin: 8px 0 0;
       color: var(--accent);
       font-weight: 800;
-      font-size: clamp(1rem, 2vw, 1.18rem);
+      font-size: clamp(1rem, 2vw, 1.14rem);
     }
+
     .description {
       margin: 20px 0 0;
       color: var(--muted);
-      font-size: clamp(1rem, 2.2vw, 1.08rem);
+      font-size: clamp(0.98rem, 2.1vw, 1.05rem);
+      line-height: 1.9;
       font-weight: 600;
     }
+
     .actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
       margin-top: 28px;
     }
+
     .actions a {
       display: inline-flex;
       align-items: center;
@@ -174,16 +222,13 @@
       font-weight: 900;
       text-decoration: none;
     }
+
     .primary {
       color: #fff;
       background: var(--accent);
       border: 1px solid var(--accent);
     }
-    .secondary {
-      color: var(--accent);
-      border: 1px solid rgba(128, 85, 49, 0.45);
-      background: rgba(255, 253, 247, 0.68);
-    }
+
     footer {
       margin-top: 86px;
       padding-top: 28px;
@@ -191,34 +236,48 @@
       color: var(--muted);
       font-size: 0.92rem;
     }
-    @media (max-width: 860px) {
+
+    @media (max-width: 780px) {
       .site {
         width: min(100% - 28px, 720px);
         padding-top: 24px;
       }
+
       header {
         display: block;
         margin-bottom: 54px;
       }
-      nav { margin-top: 14px; }
+
+      nav {
+        margin-top: 14px;
+      }
+
       .book-card {
         grid-template-columns: 1fr;
         gap: 22px;
         padding: 24px;
       }
-      .cover-wrap { max-width: 260px; }
+
+      .cover-wrap {
+        max-width: 260px;
+      }
+
       .actions {
         display: grid;
       }
-      .actions a { width: 100%; }
+
+      .actions a {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
   <div class="site">
     <header>
-      <a class="brand" href="/">幡ヶ谷亭直吉 Works &amp; Activities</a>
+      <a class="brand" href="/">髙橋直規 / 幡ヶ谷亭直吉</a>
       <nav aria-label="主要ナビゲーション">
+        <a href="/writing/">普段書いている場所</a>
         <a href="/doujinshi/" aria-current="page">同人誌</a>
         <a href="/talks/">登壇</a>
         <a href="/communities/">コミュニティ</a>
@@ -236,24 +295,24 @@
         </p>
       </section>
 
-      <section class="section" aria-labelledby="books-heading">
+      <section class="section" aria-label="同人誌一覧">
         <div class="books">
-
           <article class="book-card">
             <div class="cover-wrap">
-              <img class="cover-image" src="/doujinshi/penguin-frog/cover.jpg" alt="『ぺんぎんとかえる』の書影" loading="lazy">
+              <img class="cover-image" src="/doujinshi/penguin-frog/cover.jpg" alt="『ぺんぎんとかえる／娘が折り紙に描いた絵本を形にするまで』の書影" loading="lazy">
             </div>
             <div class="content">
               <div class="book-head">
-                <p class="meta">ZINE・絵本・52ページ・紙/電子・1000円</p>
-                <p class="meta"></p>
+                <span class="tag">ZINE</span>
+                <p class="meta">絵本・52ページ・紙/電子・1000円</p>
               </div>
-              <h3>ぺんぎんとかえる／娘が折り紙に描いた絵本を形にするまで</h3>
+              <h2>ぺんぎんとかえる／娘が折り紙に描いた絵本を形にするまで</h2>
               <p class="subtitle">極私的AI活用術</p>
-              <p class="description">6歳の娘が折り紙に描いた絵を、一冊の本にしました。家族のなかで生まれた小さな作品を、あとから辿れる形で残しているZINEです。</p>
+              <p class="description">
+                6歳の娘が折り紙に描いた絵を、一冊の本にしました。家族のなかで生まれた小さな作品を、あとから辿れる形で残しているZINEです。
+              </p>
               <div class="actions">
                 <a class="primary" href="/doujinshi/penguin-frog/">作品ページを見る</a>
-                
               </div>
             </div>
           </article>
@@ -264,14 +323,16 @@
             </div>
             <div class="content">
               <div class="book-head">
+                <span class="tag">Short Stories</span>
                 <p class="meta">同人誌・28ページ・紙・500円</p>
               </div>
-              <h3>現実からの少しの跳躍</h3>
+              <h2>現実からの少しの跳躍</h2>
               <p class="subtitle">極私的奇譚集</p>
-              <p class="description">2011年から2012年頃にブログへ綴っていた文章を抜粋・再編集した短篇集です。売れないミュージシャンだった頃の自分が見ていた、日常から少しだけ跳躍した風景を、一冊にまとめました。</p>
+              <p class="description">
+                2011年から2012年頃にブログへ綴っていた文章を抜粋・再編集した短篇集です。売れないミュージシャンだった頃の自分が見ていた、日常から少しだけ跳躍した風景を、一冊にまとめました。
+              </p>
               <div class="actions">
                 <a class="primary" href="/doujinshi/genjitsu-karano-sukoshi-no-choyaku/">作品ページを見る</a>
-                
               </div>
             </div>
           </article>
@@ -282,11 +343,14 @@
             </div>
             <div class="content">
               <div class="book-head">
+                <span class="tag">AI</span>
                 <p class="meta">同人誌・28ページ・紙/電子・500円</p>
               </div>
-              <h3>AIという名の伏線回収</h3>
+              <h2>AIという名の伏線回収</h2>
               <p class="subtitle">極私的インターネット体験</p>
-              <p class="description">AIを「突然現れた新しいもの」としてではなく、1990年代末から続くインターネットとデジタル化の延長線上にあるものとして捉え直す、技術エッセイです。</p>
+              <p class="description">
+                AIを「突然現れた新しいもの」としてではなく、1990年代末から続くインターネットとデジタル化の延長線上にあるものとして捉え直す、技術エッセイです。
+              </p>
               <div class="actions">
                 <a class="primary" href="/doujinshi/ai-foreshadowing/">作品ページを見る</a>
               </div>
@@ -299,11 +363,14 @@
             </div>
             <div class="content">
               <div class="book-head">
+                <span class="tag">Product Thinking</span>
                 <p class="meta">同人誌・24ページ・紙/電子・500円</p>
               </div>
-              <h3>作る前に使われ方を考える</h3>
+              <h2>作る前に使われ方を考える</h2>
               <p class="subtitle">極私的プロダクト思考</p>
-              <p class="description">エンジニアリングへのオーナーシップを取り戻すために辿り着いた「作る前に使われ方を考える」という極私的なプロダクト思考を主題とした技術同人誌です。</p>
+              <p class="description">
+                エンジニアリングへのオーナーシップを取り戻すために辿り着いた「作る前に使われ方を考える」という極私的なプロダクト思考を主題とした技術同人誌です。
+              </p>
               <div class="actions">
                 <a class="primary" href="/doujinshi/tsukuru-mae-ni-tsukawarekata/">作品ページを見る</a>
               </div>
@@ -316,23 +383,25 @@
             </div>
             <div class="content">
               <div class="book-head">
+                <span class="tag">DevOps</span>
                 <p class="meta">同人誌・24ページ・紙/電子・500円</p>
               </div>
-              <h3>サイロを嫌う</h3>
+              <h2>サイロを嫌う</h2>
               <p class="subtitle">極私的DevOps観</p>
-              <p class="description">DevOpsの理念を手がかりに、現場に潜む「分断」（サイロ）をどう解消していくかを、極私的な視点から考察した一冊です。</p>
+              <p class="description">
+                DevOpsの理念を手がかりに、現場に潜む「分断」（サイロ）をどう解消していくかを、極私的な視点から考察した一冊です。
+              </p>
               <div class="actions">
                 <a class="primary" href="/doujinshi/silo/">作品ページを見る</a>
               </div>
             </div>
           </article>
-
         </div>
       </section>
     </main>
 
     <footer>
-      © 幡ヶ谷亭直吉 / 髙橋直規
+      © 髙橋直規 / 幡ヶ谷亭直吉
     </footer>
   </div>
 </body>

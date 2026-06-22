@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>コミュニティ | 髙橋直規 / 幡ヶ谷亭直吉</title>
   <meta name="description" content="髙橋直規 / 幡ヶ谷亭直吉が関わっているコミュニティへのリンクです。">
+  <link rel="canonical" href="https://hatagayatei.com/communities/">
+
+  <meta property="og:site_name" content="髙橋直規 / 幡ヶ谷亭直吉">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="コミュニティ | 髙橋直規 / 幡ヶ谷亭直吉">
+  <meta property="og:description" content="多摩.dev、秦野アジャイル、子育てエンジニアリングMeetupなど、関わっているコミュニティへのリンクです。">
+  <meta property="og:url" content="https://hatagayatei.com/communities/">
+  <meta property="og:image" content="https://hatagayatei.com/ogp/communities.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="コミュニティ | 髙橋直規 / 幡ヶ谷亭直吉">
+  <meta name="twitter:description" content="多摩.dev、秦野アジャイル、子育てエンジニアリングMeetupなど、関わっているコミュニティへのリンクです。">
+  <meta name="twitter:image" content="https://hatagayatei.com/ogp/communities.jpg">
+
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -120,12 +136,12 @@
 
     .communities {
       display: grid;
-      gap: 22px;
+      gap: 20px;
     }
 
     .community-card {
       display: grid;
-      grid-template-columns: 220px 1fr;
+      grid-template-columns: 260px 1fr;
       gap: 28px;
       align-items: stretch;
       padding: clamp(20px, 3vw, 26px);
@@ -144,10 +160,10 @@
     }
 
     .thumbnail {
-      align-self: start;
       width: 100%;
+      height: 100%;
+      min-height: 190px;
       overflow: hidden;
-      aspect-ratio: 16 / 9;
       border: 1px solid var(--line);
       border-radius: 18px;
       background: var(--accent-soft);
@@ -182,18 +198,18 @@
       font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 0.04em;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .community-card h2 {
       margin: 0;
-      font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+      font-size: clamp(1.35rem, 2.4vw, 1.72rem);
       line-height: 1.4;
       letter-spacing: 0.02em;
     }
 
     .community-card p {
-      margin: 12px 0 0;
+      margin: 10px 0 0;
       color: var(--muted);
       font-size: 0.98rem;
       font-weight: 600;
@@ -202,7 +218,7 @@
 
     .cta {
       margin-top: auto;
-      padding-top: 22px;
+      padding-top: 18px;
       color: var(--accent);
       font-weight: 900;
       text-decoration: underline;
@@ -235,11 +251,15 @@
       .community-card {
         grid-template-columns: 1fr;
         gap: 22px;
+        align-items: start;
         padding: 24px;
       }
 
       .thumbnail {
-        max-width: 320px;
+        width: min(100%, 320px);
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 16 / 9;
       }
     }
   </style>

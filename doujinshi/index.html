@@ -140,6 +140,22 @@
       width: 100%;
     }
 
+    .cover-link {
+      display: block;
+      border-radius: 16px;
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .cover-link:hover {
+      transform: translateY(-3px);
+    }
+
+    .cover-link:focus-visible {
+      outline: 3px solid rgba(128, 85, 49, 0.45);
+      outline-offset: 4px;
+    }
+
     .cover-image {
       display: block;
       width: 100%;
@@ -148,6 +164,10 @@
       border: 1px solid rgba(0, 0, 0, 0.08);
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
       background: #fff;
+    }
+
+    .cover-link:hover .cover-image {
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.14);
     }
 
     .content {
@@ -299,7 +319,9 @@
         <div class="books">
           <article class="book-card">
             <div class="cover-wrap">
-              <img class="cover-image" src="/doujinshi/penguin-frog/cover.jpg" alt="『ぺんぎんとかえる／娘が折り紙に描いた絵本を形にするまで』の書影" loading="lazy">
+              <a class="cover-link" href="/doujinshi/penguin-frog/" aria-label="ぺんぎんとかえる／娘が折り紙に描いた絵本を形にするまで の作品ページを見る">
+                <img class="cover-image" src="/doujinshi/penguin-frog/cover.jpg" alt="『ぺんぎんとかえる／娘が折り紙に描いた絵本を形にするまで』の書影" loading="lazy">
+              </a>
             </div>
             <div class="content">
               <div class="book-head">
@@ -319,7 +341,9 @@
 
           <article class="book-card">
             <div class="cover-wrap">
-              <img class="cover-image" src="/doujinshi/genjitsu-karano-sukoshi-no-choyaku/cover.png" alt="『現実からの少しの跳躍』の書影" loading="lazy">
+              <a class="cover-link" href="/doujinshi/genjitsu-karano-sukoshi-no-choyaku/" aria-label="現実からの少しの跳躍 の作品ページを見る">
+                <img class="cover-image" src="/doujinshi/genjitsu-karano-sukoshi-no-choyaku/cover.png" alt="『現実からの少しの跳躍』の書影" loading="lazy">
+              </a>
             </div>
             <div class="content">
               <div class="book-head">
@@ -339,7 +363,9 @@
 
           <article class="book-card">
             <div class="cover-wrap">
-              <img class="cover-image" src="/doujinshi/ai-foreshadowing/cover.jpg" alt="『AIという名の伏線回収』の書影" loading="lazy">
+              <a class="cover-link" href="/doujinshi/ai-foreshadowing/" aria-label="AIという名の伏線回収 の作品ページを見る">
+                <img class="cover-image" src="/doujinshi/ai-foreshadowing/cover.jpg" alt="『AIという名の伏線回収』の書影" loading="lazy">
+              </a>
             </div>
             <div class="content">
               <div class="book-head">
@@ -359,7 +385,9 @@
 
           <article class="book-card">
             <div class="cover-wrap">
-              <img class="cover-image" src="/doujinshi/tsukuru-mae-ni-tsukawarekata/cover.jpg" alt="『作る前に使われ方を考える』の書影" loading="lazy">
+              <a class="cover-link" href="/doujinshi/tsukuru-mae-ni-tsukawarekata/" aria-label="作る前に使われ方を考える の作品ページを見る">
+                <img class="cover-image" src="/doujinshi/tsukuru-mae-ni-tsukawarekata/cover.jpg" alt="『作る前に使われ方を考える』の書影" loading="lazy">
+              </a>
             </div>
             <div class="content">
               <div class="book-head">
@@ -379,7 +407,9 @@
 
           <article class="book-card">
             <div class="cover-wrap">
-              <img class="cover-image" src="/doujinshi/silo/cover.png" alt="『サイロを嫌う』の書影" loading="lazy">
+              <a class="cover-link" href="/doujinshi/silo/" aria-label="サイロを嫌う の作品ページを見る">
+                <img class="cover-image" src="/doujinshi/silo/cover.png" alt="『サイロを嫌う』の書影" loading="lazy">
+              </a>
             </div>
             <div class="content">
               <div class="book-head">

@@ -27,6 +27,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
+
   <style>
     :root {
       --bg: #f7f3ea;
@@ -40,7 +41,9 @@
       --radius: 28px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -55,7 +58,9 @@
       background-size: 42px 42px;
     }
 
-    a { color: inherit; }
+    a {
+      color: inherit;
+    }
 
     .site {
       width: min(1080px, calc(100% - 40px));
@@ -86,10 +91,17 @@
       font-size: 0.94rem;
     }
 
-    nav a { text-decoration: none; }
-    nav a:hover { color: var(--accent); }
+    nav a {
+      text-decoration: none;
+    }
 
-    .hero { max-width: 900px; }
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      max-width: 980px;
+    }
 
     .eyebrow {
       display: inline-flex;
@@ -105,10 +117,28 @@
       margin-bottom: 22px;
     }
 
+    .title-row {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .title-avatar {
+      flex: 0 0 auto;
+      width: clamp(64px, 8vw, 88px);
+      height: clamp(64px, 8vw, 88px);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background:
+        center / cover no-repeat url("/ogp/default.jpg"),
+        var(--paper);
+      box-shadow: var(--shadow);
+    }
+
     h1 {
       margin: 0;
-      font-size: clamp(2.35rem, 6.2vw, 4.4rem);
-      line-height: 1.18;
+      font-size: clamp(2.35rem, 6vw, 4.25rem);
+      line-height: 1.08;
       letter-spacing: 0.015em;
     }
 
@@ -117,7 +147,9 @@
       margin-top: 30px;
     }
 
-    .summary + .summary { margin-top: 26px; }
+    .summary + .summary {
+      margin-top: 26px;
+    }
 
     .summary-badge {
       display: inline-flex;
@@ -147,7 +179,9 @@
       line-height: 1.95;
     }
 
-    .section { margin-top: 68px; }
+    .section {
+      margin-top: 68px;
+    }
 
     .cards {
       display: grid;
@@ -230,8 +264,23 @@
         margin-bottom: 54px;
       }
 
-      nav { margin-top: 14px; }
-      .cards { grid-template-columns: 1fr; }
+      nav {
+        margin-top: 14px;
+      }
+
+      .title-row {
+        align-items: center;
+        gap: 14px;
+      }
+
+      .title-avatar {
+        width: 56px;
+        height: 56px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
 
       .card {
         min-height: auto;
@@ -256,7 +305,11 @@
     <main>
       <section class="hero">
         <div class="eyebrow">hatagayatei.com</div>
-        <h1>髙橋直規 / 幡ヶ谷亭直吉</h1>
+
+        <div class="title-row">
+          <span class="title-avatar" aria-hidden="true"></span>
+          <h1>髙橋直規 / 幡ヶ谷亭直吉</h1>
+        </div>
 
         <div class="summary profile-summary">
           <span class="summary-badge">Profile</span>

@@ -142,6 +142,14 @@
       letter-spacing: 0.015em;
     }
 
+    .name-part {
+      white-space: nowrap;
+    }
+
+    .name-separator {
+      margin: 0 0.08em;
+    }
+
     .summary {
       max-width: 860px;
       margin-top: 30px;
@@ -269,13 +277,29 @@
       }
 
       .title-row {
+        display: grid;
+        grid-template-columns: 60px minmax(0, 1fr);
+        gap: 16px;
         align-items: center;
-        gap: 14px;
       }
 
       .title-avatar {
-        width: 56px;
-        height: 56px;
+        width: 60px;
+        height: 60px;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 8.8vw, 3.2rem);
+        line-height: 1.1;
+      }
+
+      .name-part {
+        display: block;
+        white-space: nowrap;
+      }
+
+      .name-separator {
+        display: none;
       }
 
       .cards {
@@ -308,7 +332,11 @@
 
         <div class="title-row">
           <span class="title-avatar" aria-hidden="true"></span>
-          <h1>髙橋直規 / 幡ヶ谷亭直吉</h1>
+          <h1>
+            <span class="name-part">髙橋直規</span>
+            <span class="name-separator">/</span>
+            <span class="name-part">幡ヶ谷亭直吉</span>
+          </h1>
         </div>
 
         <div class="summary profile-summary">

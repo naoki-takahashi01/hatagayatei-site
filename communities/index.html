@@ -118,17 +118,17 @@
       margin-top: 64px;
     }
 
-    .cards {
+    .communities {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 22px;
     }
 
-    .card {
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      min-height: 360px;
+    .community-card {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 28px;
+      align-items: stretch;
+      padding: clamp(20px, 3vw, 26px);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--paper);
@@ -137,19 +137,21 @@
       transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
     }
 
-    .card:hover {
+    .community-card:hover {
       transform: translateY(-3px);
       border-color: rgba(128, 85, 49, 0.45);
       box-shadow: 0 18px 38px rgba(77, 63, 45, 0.12);
     }
 
     .thumbnail {
-      position: relative;
+      align-self: start;
       width: 100%;
-      aspect-ratio: 16 / 9;
       overflow: hidden;
-      border-bottom: 1px solid var(--line);
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--line);
+      border-radius: 18px;
       background: var(--accent-soft);
+      box-shadow: 0 10px 24px rgba(77, 63, 45, 0.08);
     }
 
     .thumbnail img {
@@ -160,15 +162,14 @@
       transition: transform 180ms ease;
     }
 
-    .card:hover .thumbnail img {
+    .community-card:hover .thumbnail img {
       transform: scale(1.025);
     }
 
-    .card-body {
+    .content {
+      min-width: 0;
       display: flex;
-      flex: 1;
       flex-direction: column;
-      padding: 26px 28px 28px;
     }
 
     .tag {
@@ -181,27 +182,27 @@
       font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 0.04em;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
-    .card h2 {
+    .community-card h2 {
       margin: 0;
-      font-size: clamp(1.28rem, 2.1vw, 1.55rem);
-      line-height: 1.45;
+      font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+      line-height: 1.4;
       letter-spacing: 0.02em;
     }
 
-    .card p {
-      margin: 14px 0 0;
+    .community-card p {
+      margin: 12px 0 0;
       color: var(--muted);
-      font-size: 0.96rem;
+      font-size: 0.98rem;
       font-weight: 600;
       line-height: 1.9;
     }
 
     .cta {
       margin-top: auto;
-      padding-top: 28px;
+      padding-top: 22px;
       color: var(--accent);
       font-weight: 900;
       text-decoration: underline;
@@ -231,12 +232,14 @@
         margin-top: 14px;
       }
 
-      .cards {
+      .community-card {
         grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 24px;
       }
 
-      .card {
-        min-height: auto;
+      .thumbnail {
+        max-width: 320px;
       }
     }
   </style>
@@ -265,12 +268,12 @@
       </section>
 
       <section class="section" aria-label="コミュニティ一覧">
-        <div class="cards">
-          <a class="card" href="https://tamadev.jp/">
+        <div class="communities">
+          <a class="community-card" href="https://tamadev.jp/">
             <div class="thumbnail">
-              <img src="/communities/tamadev.png" alt="多摩.devのサムネイル画像" loading="lazy">
+              <img src="/communities/images/tamadev.jpg" alt="多摩.devのサムネイル画像" loading="lazy">
             </div>
-            <div class="card-body">
+            <div class="content">
               <span class="tag">公式サイト</span>
               <h2>多摩.dev</h2>
               <p>多摩地域のエンジニアコミュニティです。イベント情報や開催レポートを公式サイトにまとめています。</p>
@@ -278,11 +281,11 @@
             </div>
           </a>
 
-          <a class="card" href="https://hadanoagile.jp/">
+          <a class="community-card" href="https://hadanoagile.jp/">
             <div class="thumbnail">
-              <img src="/communities/hadanoagile.png" alt="秦野アジャイルのサムネイル画像" loading="lazy">
+              <img src="/communities/images/hadano-agile.jpg" alt="秦野アジャイルのサムネイル画像" loading="lazy">
             </div>
-            <div class="card-body">
+            <div class="content">
               <span class="tag">公式サイト</span>
               <h2>秦野アジャイル</h2>
               <p>秦野でアジャイルやチーム、学びについて話す場です。開催情報は公式サイトで確認できます。</p>
@@ -290,11 +293,11 @@
             </div>
           </a>
 
-          <a class="card" href="https://kosodate-engineering.connpass.com/">
+          <a class="community-card" href="https://kosodate-engineering.connpass.com/">
             <div class="thumbnail">
-              <img src="/communities/kosodate.png" alt="子育てエンジニアリングMeetupのサムネイル画像" loading="lazy">
+              <img src="/communities/images/kosodate-engineering.jpg" alt="子育てエンジニアリングMeetupのサムネイル画像" loading="lazy">
             </div>
-            <div class="card-body">
+            <div class="content">
               <span class="tag">connpass</span>
               <h2>子育てエンジニアリングMeetup</h2>
               <p>子育てとエンジニアリングについて話す場です。開催情報はconnpassで確認できます。</p>

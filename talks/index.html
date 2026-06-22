@@ -3,495 +3,576 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>登壇・発表資料 | 幡ヶ谷亭直吉</title>
-  <meta name="description" content="幡ヶ谷亭直吉 / 髙橋直規の登壇・発表資料アーカイブ。登壇資料・コミュニティ運営資料をまとめています。埋め込み可能なものはその場でプレビューできます。">
+  <title>登壇・発表資料 | 髙橋直規 / 幡ヶ谷亭直吉</title>
+  <meta name="description" content="髙橋直規 / 幡ヶ谷亭直吉の登壇・発表資料アーカイブ。登壇資料・コミュニティ運営資料をまとめています。埋め込み可能なものはその場でプレビューできます。">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <style>
-:root {
-  --bg: #f8f5ef;
-  --paper: #fffdf8;
-  --ink: #1f2933;
-  --muted: #65717f;
-  --line: #ded7ca;
-  --accent: #7a4f2b;
-  --accent-soft: #efe2d4;
-  --green: #506b55;
-  --shadow: 0 14px 36px rgba(31, 41, 51, 0.08);
-}
+    :root {
+      --bg: #f7f3ea;
+      --paper: rgba(255, 253, 247, 0.92);
+      --ink: #1f2a35;
+      --muted: #65717e;
+      --line: rgba(126, 91, 54, 0.22);
+      --accent: #805531;
+      --accent-soft: #eee2d4;
+      --shadow: 0 14px 30px rgba(77, 63, 45, 0.08);
+      --radius: 28px;
+    }
 
-* { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
-body {
-  margin: 0;
-  color: var(--ink);
-  background: radial-gradient(circle at top left, #fffdf8 0, var(--bg) 42%, #efe8dc 100%);
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-  line-height: 1.8;
-}
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+      background:
+        linear-gradient(rgba(126, 91, 54, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126, 91, 54, 0.055) 1px, transparent 1px),
+        var(--bg);
+      background-size: 42px 42px;
+    }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image: linear-gradient(rgba(122,79,43,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(122,79,43,0.025) 1px, transparent 1px);
-  background-size: 28px 28px;
-}
+    a {
+      color: inherit;
+    }
 
-a { color: var(--accent); text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
-a:hover { text-decoration-thickness: 0.14em; }
+    .site {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 34px 0 56px;
+    }
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: rgba(248,245,239,0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(222,215,202,0.8);
-}
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 70px;
+    }
 
-.header-inner {
-  width: min(1080px, calc(100% - 32px));
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  padding: 14px 0;
-}
+    .brand {
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
 
-.brand {
-  display: inline-flex;
-  flex-direction: column;
-  color: var(--ink);
-  text-decoration: none;
-  line-height: 1.25;
-}
-.brand strong { font-size: 1rem; letter-spacing: 0.04em; }
-.brand span { color: var(--muted); font-size: 0.78rem; }
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
 
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 18px;
-  justify-content: flex-end;
-  font-size: 0.92rem;
-}
-.nav a { color: var(--ink); text-decoration: none; }
-.nav a[aria-current="page"], .nav a:hover { color: var(--accent); }
+    nav a {
+      text-decoration: none;
+    }
 
-main { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
+    nav a[aria-current="page"],
+    nav a:hover {
+      color: var(--accent);
+    }
 
-.hero {
-  padding: 72px 0 48px;
-  display: grid;
-  gap: 28px;
-}
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  width: fit-content;
-  margin: 0 0 12px;
-  padding: 4px 10px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--green);
-  background: rgba(255,253,248,0.74);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
+    .hero {
+      max-width: 860px;
+    }
 
-h1, h2, h3 { line-height: 1.35; letter-spacing: 0.02em; }
-h1 { margin: 0; font-size: clamp(2.1rem, 7vw, 4.6rem); }
-h2 { margin: 0 0 18px; font-size: clamp(1.55rem, 3.2vw, 2.35rem); }
-h3 { margin: 0 0 8px; font-size: 1.18rem; }
-p { margin: 0 0 1rem; }
-.lead { max-width: 760px; color: var(--muted); font-size: clamp(1.02rem, 2.1vw, 1.22rem); }
+    .eyebrow,
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 8px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 247, 0.6);
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      margin-bottom: 22px;
+    }
 
-.section { padding: 40px 0; }
-.section-header { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 18px; }
-.section-header p { max-width: 650px; color: var(--muted); margin: 0; }
+    .section-badge {
+      padding: 5px 13px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: 0.78rem;
+      margin-bottom: 16px;
+    }
 
-.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.card {
-  background: rgba(255,253,248,0.84);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 22px;
-  box-shadow: var(--shadow);
-}
-.card-link { display: block; color: inherit; text-decoration: none; transition: transform .18s ease, border-color .18s ease; }
-.card-link:hover { transform: translateY(-3px); border-color: rgba(122,79,43,0.55); }
-.card p { color: var(--muted); margin: 0; }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.35rem, 6.2vw, 4.4rem);
+      line-height: 1.18;
+      letter-spacing: 0.015em;
+    }
 
-.badge { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; color: var(--green); background: var(--accent-soft); font-size: 0.78rem; font-weight: 700; }
+    h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.25;
+      letter-spacing: 0.015em;
+    }
 
-.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
-.button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 18px; border-radius: 999px; border: 1px solid var(--accent); color: #fff; background: var(--accent); font-weight: 700; text-decoration: none; }
-.button.secondary { color: var(--accent); background: rgba(255,253,248,0.76); }
+    h3 {
+      margin: 0;
+      font-size: clamp(1.12rem, 2.2vw, 1.28rem);
+      line-height: 1.55;
+      letter-spacing: 0.02em;
+    }
 
-.meta-list { display: grid; grid-template-columns: 160px 1fr; gap: 8px 18px; margin: 20px 0; }
-.meta-list dt { color: var(--muted); font-weight: 700; }
-.meta-list dd { margin: 0; }
+    .lead {
+      margin: 30px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.04rem, 2.2vw, 1.26rem);
+      line-height: 1.95;
+      font-weight: 600;
+    }
 
-.list { display: grid; gap: 12px; }
-.list-item { padding: 16px 0; border-top: 1px solid var(--line); }
-.list-item:last-child { border-bottom: 1px solid var(--line); }
-.list-item p { color: var(--muted); margin: 0; }
+    .jump-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 34px;
+    }
 
-.note { background: rgba(80,107,85,0.08); border: 1px solid rgba(80,107,85,0.18); border-radius: 18px; padding: 18px; color: var(--green); }
+    .jump-nav a {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--accent);
+      background: rgba(255, 253, 247, 0.72);
+      font-size: 0.92rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
 
-.footer { width: min(1080px, calc(100% - 32px)); margin: 56px auto 0; padding: 32px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
-.footer a { color: inherit; }
+    .jump-nav a:hover {
+      border-color: rgba(128, 85, 49, 0.45);
+      background: var(--accent-soft);
+    }
 
-@media (max-width: 760px) {
-  .header-inner { align-items: flex-start; flex-direction: column; }
-  .nav { justify-content: flex-start; }
-  .hero { padding-top: 48px; }
-  .grid, .grid.two { grid-template-columns: 1fr; }
-  .section-header { display: block; }
-  .meta-list { grid-template-columns: 1fr; gap: 0; }
-}
+    .section {
+      margin-top: 76px;
+      scroll-margin-top: 24px;
+    }
 
+    .section-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
 
-/* Talks archive */
-.archive-intro { padding-top: 16px; }
-.wide-card { max-width: 100%; }
-.jump-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 18px;
-}
-.jump-nav a {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 12px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgba(255,253,248,0.72);
-  color: var(--ink);
-  text-decoration: none;
-  font-size: 0.92rem;
-}
-.jump-nav a:hover { color: var(--accent); border-color: rgba(122,79,43,0.55); }
-.talk-section { scroll-margin-top: 90px; }
-.talk-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
-.talk-card {
-  overflow: hidden;
-  background: rgba(255,253,248,0.84);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-}
-.deck-preview {
-  position: relative;
-  width: 100%;
-  aspect-ratio: var(--deck-ratio, 710/399);
-  background: var(--accent-soft);
-  border-bottom: 1px solid var(--line);
-}
-.deck-preview iframe,
-.deck-preview .speakerdeck-iframe {
-  position: absolute;
-  inset: 0;
-  width: 100% !important;
-  height: 100% !important;
-  border: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  background: transparent !important;
-}
-.deck-preview-placeholder {
-  display: grid;
-  place-items: center;
-  padding: 24px;
-  text-align: center;
-  color: var(--muted);
-}
-.deck-preview-placeholder p { margin: 0 0 0.4rem; }
-.talk-body { padding: 18px 20px 20px; }
-.talk-meta {
-  margin: 0 0 6px;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-.button-row.compact { margin-top: 14px; }
-.button-row.compact .button { padding: 8px 12px; font-size: 0.92rem; }
-@media (max-width: 860px) {
-  .talk-grid { grid-template-columns: 1fr; }
-}
+    .section-header p {
+      max-width: 520px;
+      margin: 0;
+      color: var(--muted);
+      font-weight: 600;
+      line-height: 1.9;
+    }
 
+    .talk-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .talk-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .deck-preview {
+      position: relative;
+      width: 100%;
+      aspect-ratio: var(--deck-ratio, 710/399);
+      border-bottom: 1px solid var(--line);
+      background: var(--accent-soft);
+    }
+
+    .deck-preview iframe,
+    .deck-preview .speakerdeck-iframe {
+      position: absolute;
+      inset: 0;
+      width: 100% !important;
+      height: 100% !important;
+      border: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: transparent !important;
+    }
+
+    .talk-body {
+      padding: 22px;
+    }
+
+    .talk-meta {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 86px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 860px) {
+      .talk-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .site {
+        width: min(100% - 28px, 720px);
+        padding-top: 24px;
+      }
+
+      header {
+        display: block;
+        margin-bottom: 54px;
+      }
+
+      nav {
+        margin-top: 14px;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .section-header p {
+        margin-top: 16px;
+      }
+    }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="/"><strong>幡ヶ谷亭直吉</strong><span>Works & Activities</span></a>
-      <nav class="nav" aria-label="主要ナビゲーション">
+  <div class="site">
+    <header>
+      <a class="brand" href="/">髙橋直規 / 幡ヶ谷亭直吉</a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="/writing/">普段書いている場所</a>
         <a href="/doujinshi/">同人誌</a>
-        <a aria-current="page" href="/talks/">登壇</a>
+        <a href="/talks/" aria-current="page">登壇</a>
         <a href="/communities/">コミュニティ</a>
         <a href="/music/">音楽</a>
       </nav>
-    </div>
-  </header>
-  <main>
-    <section class="hero">
-      <div>
-        <p class="eyebrow">Talks & Decks</p>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Talks &amp; Decks</div>
         <h1>登壇・発表資料</h1>
-      </div>
-    </section>
+        <p class="lead">
+          登壇資料・発表資料・コミュニティ運営資料をまとめています。
+          埋め込み可能なものは、このページ上でプレビューできます。
+        </p>
 
-    <section class="section archive-intro">
-      <nav class="jump-nav" aria-label="資料カテゴリ">
-        <a href="#talk-1374d566">2026年</a><a href="#talk-4532a46e">2025年</a><a href="#talk-84c59841">未登壇資料</a><a href="#talk-e106785d">多摩.dev運営</a><a href="#talk-7f40cd38">秦野アジャイル運営</a>
-      </nav>
-    </section>
+        <nav class="jump-nav" aria-label="資料カテゴリ">
+          <a href="#2026">2026年</a>
+          <a href="#2025">2025年</a>
+          <a href="#unspoken">未登壇資料</a>
+          <a href="#tamadev">多摩.dev運営</a>
+          <a href="#hadano">秦野アジャイル運営</a>
+        </nav>
+      </section>
 
+      <section class="section talk-section" id="2026" aria-labelledby="2026-heading">
+        <div class="section-header">
+          <div>
+            <span class="section-badge">Archive</span>
+            <h2 id="2026-heading">2026年</h2>
+          </div>
+        </div>
+        <div class="talk-grid">
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/830e537dbf4e4423b273717d038f6d31" title="豊かさってなんなんだ" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.05.15 / きたく.dev #2</p>
+              <h3>豊かさってなんなんだ</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/6e03d24ac307460da345b183496ac29e" title="広がっていく学びのコモンズ" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.05.12 / Tachikawa.any #1</p>
+              <h3>広がっていく学びのコモンズ</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/76c4f3a54ced422eadee42612874e6a5" title="フィードバックは贈り物" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.05.01 / Tamagawa.dev #1</p>
+              <h3>フィードバックは贈り物</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/e37bfefec3ca4dceac3deebd505d9e4e" title="プロダクトを触って語って理解する、チーム横断バグバッシュのすすめ" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.04.11 / PHPカンファレンス小田原2026</p>
+              <h3>プロダクトを触って語って理解する、チーム横断バグバッシュのすすめ</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/fccc2d0c0f52464daf4259fb163ecc67" title="40代からのアウトプット ― 経験は価値ある学びに変わる" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.04.04 / アウトプットの背中を押すカンファレンス「ワンストップ アウトプット！」</p>
+              <h3>40代からのアウトプット ― 経験は価値ある学びに変わる</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/73d740e313754affa1ef8c315e4a9159" title="俺の/私の最強アーキテクチャ決定戦開催 ― チームで新しいアーキテクチャに適合していくために" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.03.22 / PHPerKaigi2026</p>
+              <h3>俺の/私の最強アーキテクチャ決定戦開催 ― チームで新しいアーキテクチャに適合していくために</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/03bfe08f92c64813910c7304348a55b2" title="私たち準委任PdEは2つのプロダクトに挑戦する ～ソフトウェア、開発支援という”二重”のプロダクトエンジニアリングの実践～" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.02.12 / Product Engineering Night #12 〜LT大会！〜</p>
+              <h3>私たち準委任PdEは2つのプロダクトに挑戦する ～ソフトウェア、開発支援という”二重”のプロダクトエンジニアリングの実践～</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/2377373db8f147e8a94a4f59fcf8639f" title="ファシリテーション勉強中 その場に何が求められるかを考えるようになるまで" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.01.23 / 会社の中で使えるファシリテーションスキルを向上するための研究会 #4</p>
+              <h3>ファシリテーション勉強中 その場に何が求められるかを考えるようになるまで</h3>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    <section class="section talk-section" aria-labelledby="talk-1374d566">
-      <div class="section-header">
-        <div>
-          <h2 id="talk-1374d566">2026年</h2>
+      <section class="section talk-section" id="2025" aria-labelledby="2025-heading">
+        <div class="section-header">
+          <div>
+            <span class="section-badge">Archive</span>
+            <h2 id="2025-heading">2025年</h2>
+          </div>
         </div>
-      </div>
-      <div class="talk-grid">
+        <div class="talk-grid">
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/8e1a730ae15d470091e74a25c2f77502" title="2025年 開発生産「可能」性向上報告 サイロ解消からチームが能動性を獲得するまで" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2025.12.16 / 2025年を総括しよう！今年の開発生産性を振り返る大忘年会〖D-Plus Tokyo #20〗</p>
+              <h3>2025年 開発生産「可能」性向上報告 サイロ解消からチームが能動性を獲得するまで</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/53edf266dc17473cba7d7ee9dd3f5a9d" title="スクラムの適応の可能性 AI駆動開発にオーナーシップを持つ" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2025.12.10 / 渋谷アジャイル@スタートアップ#17</p>
+              <h3>スクラムの適応の可能性 AI駆動開発にオーナーシップを持つ</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/403e82d22f724f8db6dbad597c699638" title="仕様は“書く”より“語る” - 分断を超えたチーム開発の実践" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2025.11.15 / JJUG CCC 2025 Fall</p>
+              <h3>仕様は“書く”より“語る” - 分断を超えたチーム開発の実践</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/8571ad5d3b464cadbdbc731adcbb9132" title="空間を設計する力を考える" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2025.10.04 / XP祭り2025</p>
+              <h3>空間を設計する力を考える</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/89f05e98df444de98ea92ede4e4f754b" title="定期的な価値提供だけじゃない、スクラムが導くチームの共創化" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2025.10.04 / スクラム祭り2025</p>
+              <h3>定期的な価値提供だけじゃない、スクラムが導くチームの共創化</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/502;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/a1a6e215020442e6b209d1dea5d0338b" title="プロダクトという一杯を作る - プロダクトチームが味の責任を持つまでの煮込み奮闘記" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2025.07.26 / TechRAMEN 2025 Conference</p>
+              <h3>プロダクトという一杯を作る - プロダクトチームが味の責任を持つまでの煮込み奮闘記</h3>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <article class="talk-card" id="talk-71cc5c85">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/830e537dbf4e4423b273717d038f6d31" title="豊かさってなんなんだ" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.05.15 / きたく.dev #2</p>
-          <h3>豊かさってなんなんだ</h3>
+      <section class="section talk-section" id="unspoken" aria-labelledby="unspoken-heading">
+        <div class="section-header">
+          <div>
+            <span class="section-badge">Archive</span>
+            <h2 id="unspoken-heading">未登壇資料</h2>
+          </div>
+            <p>登壇前・登壇外で公開している資料です。</p>
         </div>
-      </article>
+        <div class="talk-grid">
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/502;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/c5c4f41e5e164c19933b7fcc271d64b5" title="娘の未来に続くチームトポロジー" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">未登壇資料</p>
+              <h3>娘の未来に続くチームトポロジー</h3>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <article class="talk-card" id="talk-71545390">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/6e03d24ac307460da345b183496ac29e" title="広がっていく学びのコモンズ" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.05.12 / Tachikawa.any #1</p>
-          <h3>広がっていく学びのコモンズ</h3>
+      <section class="section talk-section" id="tamadev" aria-labelledby="tamadev-heading">
+        <div class="section-header">
+          <div>
+            <span class="section-badge">Archive</span>
+            <h2 id="tamadev-heading">多摩.dev運営</h2>
+          </div>
+            <p>多摩.devの運営・案内に関する資料です。</p>
         </div>
-      </article>
+        <div class="talk-grid">
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/53d6595158104a479cb6e43fb2fe20b5" title="多摩.devが動きだしました" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.06.11 / 多摩.dev</p>
+              <h3>多摩.devが動きだしました</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/ba3dc436f7034a49955410c5c8cba335" title="多摩.dev がはじまりました" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.04.24 / 多摩.dev</p>
+              <h3>多摩.dev がはじまりました</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/2a65af301a5247c5a5d93443d16cb17f" title="多摩.devをはじめます" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.02.26 / 多摩.dev</p>
+              <h3>多摩.devをはじめます</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/3f4fdfce26234b2c99e0b9bfb38a5e90" title="多摩.dev #3" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.06.11 / 多摩.dev #3</p>
+              <h3>多摩.dev #3</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/a3cbd4e7d84d4fed8c5c184e4d2fa94a" title="多摩.dev #2.5" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.05.17 / 多摩.dev #2.5 ゆるもく会</p>
+              <h3>多摩.dev #2.5</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/db3579cc74ff46db9278249e24e1191d" title="多摩.dev #2" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.04.24 / 多摩.dev #2</p>
+              <h3>多摩.dev #2</h3>
+            </div>
+          </article>
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/8c6f78a98ab245ef89898961969ca0e1" title="多摩.dev #1" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.02.26 / 多摩.dev #1</p>
+              <h3>多摩.dev #1</h3>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <article class="talk-card" id="talk-a8233605">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/76c4f3a54ced422eadee42612874e6a5" title="フィードバックは贈り物" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.05.01 / Tamagawa.dev #1</p>
-          <h3>フィードバックは贈り物</h3>
+      <section class="section talk-section" id="hadano" aria-labelledby="hadano-heading">
+        <div class="section-header">
+          <div>
+            <span class="section-badge">Archive</span>
+            <h2 id="hadano-heading">秦野アジャイル運営</h2>
+          </div>
+            <p>秦野アジャイルの運営・案内に関する資料です。</p>
         </div>
-      </article>
+        <div class="talk-grid">
+          <article class="talk-card">
+            <div class="deck-preview" style="--deck-ratio:710/399;">
+              <iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/3b7643e14e9a44348d3ee6f2005995a8" title="秦野アジャイル #1" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="talk-body">
+              <p class="talk-meta">2026.05.02 / 秦野アジャイル #1</p>
+              <h3>秦野アジャイル #1</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
 
-      <article class="talk-card" id="talk-4ed0be84">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/e37bfefec3ca4dceac3deebd505d9e4e" title="プロダクトを触って語って理解する、チーム横断バグバッシュのすすめ" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.04.11 / PHPカンファレンス小田原2026</p>
-          <h3>プロダクトを触って語って理解する、チーム横断バグバッシュのすすめ</h3>
-        </div>
-      </article>
-
-      <article class="talk-card" id="talk-1e0c3702">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/fccc2d0c0f52464daf4259fb163ecc67" title="40代からのアウトプット ― 経験は価値ある学びに変わる" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.04.04 / アウトプットの背中を押すカンファレンス「ワンストップ アウトプット！」</p>
-          <h3>40代からのアウトプット ― 経験は価値ある学びに変わる</h3>
-        </div>
-      </article>
-
-      <article class="talk-card" id="talk-d7234a4a">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/73d740e313754affa1ef8c315e4a9159" title="俺の/私の最強アーキテクチャ決定戦開催 ― チームで新しいアーキテクチャに適合していくために" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.03.22 / PHPerKaigi2026</p>
-          <h3>俺の/私の最強アーキテクチャ決定戦開催 ― チームで新しいアーキテクチャに適合していくために</h3>
-        </div>
-      </article>
-
-      <article class="talk-card" id="talk-5f7dd2f4">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/03bfe08f92c64813910c7304348a55b2" title="フィードバックは贈り物" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.02.12 / Product Engineering Night #12 〜LT大会！〜</p>
-          <h3>私たち準委任PdEは2つのプロダクトに挑戦する ～ソフトウェア、開発支援という”二重”のプロダクトエンジニアリングの実践～</h3>
-        </div>
-      </article>
-
-      <article class="talk-card" id="talk-00102702">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/2377373db8f147e8a94a4f59fcf8639f" title="フィードバックは贈り物" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.01.23 / 会社の中で使えるファシリテーションスキルを向上するための研究会 #4</p>
-          <h3>ファシリテーション勉強中 その場に何が求められるかを考えるようになるまで</h3>
-        </div>
-      </article>
-      </div>
-    </section>
-    <section class="section talk-section" aria-labelledby="talk-4532a46e">
-      <div class="section-header">
-        <div>
-          <h2 id="talk-4532a46e">2025年</h2>
-        </div>
-      </div>
-      <div class="talk-grid">
-
-      <article class="talk-card" id="talk-b3b1b641">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/8e1a730ae15d470091e74a25c2f77502" title="2025年 開発生産「可能」性向上報告 サイロ解消からチームが能動性を獲得するまで" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2025.12.16 / 2025年を総括しよう！今年の開発生産性を振り返る大忘年会〖D-Plus Tokyo #20〗</p>
-          <h3>2025年 開発生産「可能」性向上報告 サイロ解消からチームが能動性を獲得するまで</h3>
-        </div>
-      </article>
-
-      <article class="talk-card" id="talk-8bcefd44">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/53edf266dc17473cba7d7ee9dd3f5a9d" title="スクラムの適応の可能性 AI駆動開発にオーナーシップを持つ" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2025.12.10 / 渋谷アジャイル@スタートアップ#17</p>
-          <h3>スクラムの適応の可能性 AI駆動開発にオーナーシップを持つ</h3>
-        </div>
-      </article>
-
-      <article class="talk-card" id="talk-7acdfe99">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/403e82d22f724f8db6dbad597c699638" title="仕様は“書く”より“語る” - 分断を超えたチーム開発の実践" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2025.11.15 / JJUG CCC 2025 Fall</p>
-          <h3>仕様は“書く”より“語る” - 分断を超えたチーム開発の実践</h3>
-        </div>
-      </article>
-
-      <article class="talk-card" id="talk-5df01a6d">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/8571ad5d3b464cadbdbc731adcbb9132" title="空間を設計する力を考える" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2025.10.04 / XP祭り2025</p>
-          <h3>空間を設計する力を考える</h3>
-        </div>
-      </article>
-
-      <article class="talk-card" id="talk-1dcf757a">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/89f05e98df444de98ea92ede4e4f754b" title="定期的な価値提供だけじゃない、スクラムが導くチームの共創化" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2025.10.04 / スクラム祭り2025</p>
-          <h3>定期的な価値提供だけじゃない、スクラムが導くチームの共創化</h3>
-        </div>
-      </article>
-
-      <article class="talk-card" id="talk-15f3f8c9">
-        <div class="deck-preview" style="--deck-ratio:710/502;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/a1a6e215020442e6b209d1dea5d0338b" title="プロダクトという一杯を作る - プロダクトチームが味の責任を持つまでの煮込み奮闘記" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2025.07.26 / TechRAMEN 2025 Conference</p>
-          <h3>プロダクトという一杯を作る - プロダクトチームが味の責任を持つまでの煮込み奮闘記</h3>
-        </div>
-      </article>
-      </div>
-    </section>
-    <section class="section talk-section" aria-labelledby="talk-84c59841">
-      <div class="section-header">
-        <div>
-          <h2 id="talk-84c59841">未登壇資料</h2>
-        </div>
-        <p>登壇前・登壇外で公開している資料です。</p>
-      </div>
-      <div class="talk-grid">
-
-      <article class="talk-card" id="talk-ea1485f6">
-        <div class="deck-preview" style="--deck-ratio:710/502;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/c5c4f41e5e164c19933b7fcc271d64b5" title="娘の未来に続くチームトポロジー" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">未登壇資料</p>
-          <h3>娘の未来に続くチームトポロジー</h3>
-        </div>
-      </article>
-      </div>
-    </section>
-    <section class="section talk-section" aria-labelledby="talk-e106785d">
-      <div class="section-header">
-        <div>
-          <h2 id="talk-e106785d">多摩.dev運営</h2>
-        </div>
-        <p>多摩.devの運営・案内に関する資料です。</p>
-      </div>
-      <div class="talk-grid">
-
-      <article class="talk-card" id="talk-9475f0d1">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/53d6595158104a479cb6e43fb2fe20b5" title="多摩.devが動きだしました" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.06.11 / 多摩.dev</p>
-          <h3>多摩.devが動きだしました</h3>
-        </div>
-      </article>
-
-        <article class="talk-card" id="talk-tamadev-started">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/ba3dc436f7034a49955410c5c8cba335" title="多摩.dev がはじまりました" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.04.24 / 多摩.dev</p>
-          <h3>多摩.dev がはじまりました</h3>
-        </div>
-      </article>
-
-      <article class="talk-card" id="talk-214cf2da">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/2a65af301a5247c5a5d93443d16cb17f" title="多摩.devをはじめます" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.02.26 / 多摩.dev</p>
-          <h3>多摩.devをはじめます</h3>
-        </div>
-      </article>
-
-      <article class="talk-card" id="talk-tamadev-3">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/3f4fdfce26234b2c99e0b9bfb38a5e90" title="多摩.dev #3" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.06.11 / 多摩.dev #3</p>
-          <h3>多摩.dev #3</h3>
-        </div>
-      </article>
-
-      <article class="talk-card" id="talk-tamadev-25">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/a3cbd4e7d84d4fed8c5c184e4d2fa94a" title="多摩.dev #2.5" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.05.17 / 多摩.dev #2.5 ゆるもく会</p>
-          <h3>多摩.dev #2.5</h3>
-        </div>
-      </article>
-
-      <article class="talk-card" id="talk-tamadev-2">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/db3579cc74ff46db9278249e24e1191d" title="多摩.dev #2" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.04.24 / 多摩.dev #2</p>
-          <h3>多摩.dev #2</h3>
-        </div>
-      </article>
-
-      <article class="talk-card" id="talk-b470842a">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/8c6f78a98ab245ef89898961969ca0e1" title="多摩.dev #1" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.02.26 / 多摩.dev #1</p>
-          <h3>多摩.dev #1</h3>
-        </div>
-      </article>
-      </div>
-    </section>
-    <section class="section talk-section" aria-labelledby="talk-7f40cd38">
-      <div class="section-header">
-        <div>
-          <h2 id="talk-7f40cd38">秦野アジャイル運営</h2>
-        </div>
-        <p>秦野アジャイルの運営・案内に関する資料です。</p>
-      </div>
-      <div class="talk-grid">
-
-      <article class="talk-card" id="talk-ea42e986">
-        <div class="deck-preview" style="--deck-ratio:710/399;"><iframe class="speakerdeck-iframe" src="https://speakerdeck.com/player/3b7643e14e9a44348d3ee6f2005995a8" title="秦野アジャイル #1" loading="lazy" allowfullscreen></iframe></div>
-        <div class="talk-body">
-          <p class="talk-meta">2026.05.02 / 秦野アジャイル #1</p>
-          <h3>秦野アジャイル #1</h3>
-        </div>
-      </article>
-      </div>
-    </section>
-  </main>
-  <footer class="footer"><p>© 幡ヶ谷亭直吉 / 髙橋直規</p></footer>
+    <footer>
+      © 髙橋直規 / 幡ヶ谷亭直吉
+    </footer>
+  </div>
 </body>
 </html>

@@ -5,13 +5,157 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ぺんぎんとかえる／娘が折り紙に描いた絵本を形にするまで | 幡ヶ谷亭直吉</title>
   <meta name="description" content="6歳の娘が折り紙に描いた絵本を、一冊の本にしたZINE。アニメーション版も公開しています。">
-  <link rel="stylesheet" href="/style.css">
-
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <style>
+    :root {
+      --bg: #f7f3ea;
+      --paper: rgba(255, 253, 247, 0.92);
+      --ink: #1f2a35;
+      --muted: #65717e;
+      --line: rgba(126, 91, 54, 0.22);
+      --accent: #805531;
+      --accent-soft: #eee2d4;
+      --shadow: 0 14px 30px rgba(77, 63, 45, 0.08);
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+      background:
+        linear-gradient(rgba(126, 91, 54, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126, 91, 54, 0.055) 1px, transparent 1px),
+        var(--bg);
+      background-size: 42px 42px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 34px 0 56px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 70px;
+    }
+
+    .brand {
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+
+    nav a {
+      text-decoration: none;
+    }
+
+    nav a[aria-current="page"],
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      max-width: 860px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 247, 0.6);
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.35rem, 6.2vw, 4.4rem);
+      line-height: 1.18;
+      letter-spacing: 0.015em;
+    }
+
+    .lead {
+      margin: 30px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.04rem, 2.2vw, 1.26rem);
+      line-height: 1.95;
+      font-weight: 600;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      color: var(--accent);
+      border: 1px solid rgba(128, 85, 49, 0.45);
+      background: rgba(255, 253, 247, 0.68);
+    }
+
+    .section {
+      margin-top: 64px;
+    }
+
+    .section h2 {
+      margin: 0 0 24px;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.25;
+    }
+
     .cover-figure {
       margin: 0;
       max-width: 360px;
     }
+
     .cover-image {
       display: block;
       width: min(100%, 360px);
@@ -21,87 +165,217 @@
       box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
       background: #fff;
     }
-    .cover-note {
-      margin-top: 0.75rem;
-      color: #666;
+
+    .media-block {
+      max-width: 860px;
+      padding: clamp(26px, 4vw, 36px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .media-block p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.1vw, 1.06rem);
+      line-height: 2;
+      font-weight: 600;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      max-width: 760px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #000;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+    }
+
+    .meta-list {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 0;
+      max-width: 760px;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .meta-list dt,
+    .meta-list dd {
+      margin: 0;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-list dt {
+      color: var(--accent);
+      font-weight: 900;
+      background: rgba(238, 226, 212, 0.56);
+    }
+
+    .meta-list dd {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-list dt:last-of-type,
+    .meta-list dd:last-of-type {
+      border-bottom: none;
+    }
+
+    .text-block {
+      max-width: 860px;
+      padding: clamp(26px, 4vw, 36px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .text-block p {
+      margin: 0 0 1.25em;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.1vw, 1.06rem);
+      line-height: 2;
+      font-weight: 600;
+    }
+
+    .text-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      margin-top: 86px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
       font-size: 0.92rem;
+    }
+
+    @media (max-width: 780px) {
+      .site {
+        width: min(100% - 28px, 720px);
+        padding-top: 24px;
+      }
+
+      header {
+        display: block;
+        margin-bottom: 54px;
+      }
+
+      nav {
+        margin-top: 14px;
+      }
+
+      .button-row {
+        display: grid;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .meta-list {
+        grid-template-columns: 1fr;
+      }
+
+      .meta-list dt {
+        border-bottom: none;
+        padding-bottom: 4px;
+      }
+
+      .meta-list dd {
+        padding-top: 4px;
+      }
+
+      .meta-list dt:last-of-type {
+        border-bottom: none;
+      }
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="/">
-        <strong>幡ヶ谷亭直吉</strong>
-        <span>Works &amp; Activities</span>
-      </a>
-      <nav class="nav" aria-label="主要ナビゲーション">
-        <a aria-current="page" href="/doujinshi/">同人誌</a>
+  <div class="site">
+    <header>
+      <a class="brand" href="/">髙橋直規 / 幡ヶ谷亭直吉</a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="/writing/">普段書いている場所</a>
+        <a href="/doujinshi/" aria-current="page">同人誌</a>
         <a href="/talks/">登壇</a>
         <a href="/communities/">コミュニティ</a>
         <a href="/music/">音楽</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section class="hero">
-      <div>
-        <p class="eyebrow">Doujinshi / ZINE</p>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Doujinshi / ZINE</div>
         <h1>ぺんぎんとかえる／娘が折り紙に描いた絵本を形にするまで</h1>
-      </div>
-      <p class="lead">
-        6歳の娘が折り紙に描いた絵本を、一冊の本にしました。
-      </p>
-      <div class="button-row"><a class="button secondary" href="/doujinshi/">同人誌一覧へ</a></div>
-    </section>
+        <p class="lead">
+          6歳の娘が折り紙に描いた絵本を、一冊の本にしました。
+        </p>
+        <div class="button-row">
+          <a class="button secondary" href="/doujinshi/">同人誌一覧へ</a>
+        </div>
+      </section>
 
-    <section class="section">
-      <h2>書影</h2>
-      <figure class="cover-figure">
-        <img class="cover-image" src="./cover.jpg" alt="『ぺんぎんとかえる』の書影" loading="lazy">
-      </figure>
-    </section>
+      <section class="section">
+        <h2>書影</h2>
+        <figure class="cover-figure">
+          <img class="cover-image" src="./cover.jpg" alt="『ぺんぎんとかえる』の書影" loading="lazy">
+        </figure>
+      </section>
 
-    <section class="section">
-      <h2>アニメーション版</h2>
-      <p>
-        本に収録した絵本をもとに、短いアニメーションを作りました。
-        よろしければ、あわせてご覧ください。
-      </p>
+      <section class="section">
+        <h2>アニメーション版</h2>
+        <div class="media-block">
+          <p>
+            本に収録した絵本をもとに、短いアニメーションを作りました。
+            よろしければ、あわせてご覧ください。
+          </p>
 
-      <video controls playsinline preload="metadata" poster="./poster.jpg">
-        <source src="./penguin-frog.mp4" type="video/mp4">
-        お使いのブラウザでは動画を再生できません。
-      </video>
-    </section>
+          <video controls playsinline preload="metadata" poster="./poster.jpg">
+            <source src="./penguin-frog.mp4" type="video/mp4">
+            お使いのブラウザでは動画を再生できません。
+          </video>
+        </div>
+      </section>
 
-    <section class="section">
-      <h2>本について</h2>
-      <dl class="meta-list">
-        <dt>タイトル</dt>
-        <dd>ぺんぎんとかえる</dd>
-        <dt>作・絵</dt>
-        <dd>たかはしここね</dd>
-        <dt>制作・編集</dt>
-        <dd>幡ヶ谷亭直吉</dd>
-        <dt>ジャンル</dt>
-        <dd>ZINE / 絵本 / 親子制作</dd>
-        <dt>初出</dt>
-        <dd>ZINEフェス東京</dd>
-      </dl>
-    </section>
+      <section class="section">
+        <h2>本について</h2>
+        <dl class="meta-list">
+          <dt>タイトル</dt>
+          <dd>ぺんぎんとかえる</dd>
+          <dt>作・絵</dt>
+          <dd>たかはしここね</dd>
+          <dt>制作・編集</dt>
+          <dd>幡ヶ谷亭直吉</dd>
+          <dt>ジャンル</dt>
+          <dd>ZINE / 絵本 / 親子制作</dd>
+          <dt>初出</dt>
+          <dd>ZINEフェス東京</dd>
+        </dl>
+      </section>
 
-    <section class="section">
-      <h2>紹介文</h2>
-      <p>6歳の娘が折り紙に描いた絵本を、一冊の本にしました。紙に描かれた小さな物語を、ZINEという形に整えた親子制作の記録です。</p>
-      <p>ぺんぎんとかえるが登場する、短くて素朴な絵本です。子どもがそのとき描いた線や言葉をなるべくそのまま残しながら、本として手に取れる形にしました。</p>
-      <p>反対側から読むと、『娘が折り紙に描いた絵本を形にするまで — 極私的AI活用術』として、制作の動機や手順を読むことができます。子どもの絵を本にする過程と、そのなかでAIをどう使ったのかをまとめています。</p>
-    </section>
-  </main>
+      <section class="section">
+        <h2>紹介文</h2>
+        <div class="text-block">
+          <p>6歳の娘が折り紙に描いた絵本を、一冊の本にしました。紙に描かれた小さな物語を、ZINEという形に整えた親子制作の記録です。</p>
+          <p>ぺんぎんとかえるが登場する、短くて素朴な絵本です。子どもがそのとき描いた線や言葉をなるべくそのまま残しながら、本として手に取れる形にしました。</p>
+          <p>反対側から読むと、『娘が折り紙に描いた絵本を形にするまで — 極私的AI活用術』として、制作の動機や手順を読むことができます。子どもの絵を本にする過程と、そのなかでAIをどう使ったのかをまとめています。</p>
+        </div>
+      </section>
+    </main>
 
-  <footer class="footer">
-    <p>© 幡ヶ谷亭直吉 / 髙橋直規</p>
-  </footer>
+    <footer>
+      © 髙橋直規 / 幡ヶ谷亭直吉
+    </footer>
+  </div>
 </body>
 </html>

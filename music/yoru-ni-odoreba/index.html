@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>夜に踊れば | 高橋直規</title>
   <meta name="description" content="高橋直規のソロアルバム『夜に踊れば』の作品紹介ページです。">
+  <link rel="canonical" href="https://hatagayatei.com/music/yoru-ni-odoreba/">
+
+  <meta property="og:site_name" content="髙橋直規 / 幡ヶ谷亭直吉">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="夜に踊れば | 高橋直規">
+  <meta property="og:description" content="高橋直規のソロアルバム『夜に踊れば』の作品紹介ページです。収録曲の再生欄と作品情報を掲載しています。">
+  <meta property="og:url" content="https://hatagayatei.com/music/yoru-ni-odoreba/">
+  <meta property="og:image" content="https://hatagayatei.com/ogp/default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="夜に踊れば | 高橋直規">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="夜に踊れば | 高橋直規">
+  <meta name="twitter:description" content="高橋直規のソロアルバム『夜に踊れば』の作品紹介ページです。収録曲の再生欄と作品情報を掲載しています。">
+  <meta name="twitter:image" content="https://hatagayatei.com/ogp/default.jpg">
+  <meta name="twitter:image:alt" content="夜に踊れば | 高橋直規">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <style>
     :root {
       --bg: #061a3a;
@@ -61,6 +83,10 @@
       color: var(--sub);
       font-size: 14px;
       text-decoration: none;
+    }
+
+    .top-link:hover {
+      color: var(--ink);
     }
 
     .hero {
@@ -171,6 +197,14 @@
       color: var(--moon);
     }
 
+    .button:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .button.primary:hover {
+      background: rgba(255, 232, 75, 0.22);
+    }
+
     .section {
       margin-top: 44px;
     }
@@ -189,16 +223,6 @@
       margin: 0;
       font-size: 26px;
       line-height: 1.3;
-    }
-
-    .note {
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    code {
-      color: var(--moon);
     }
 
     .album-grid {
@@ -285,26 +309,6 @@
       margin: 0;
     }
 
-    .credit-box {
-      padding: 24px;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.07);
-    }
-
-    .credit-box p {
-      margin: 0;
-      color: var(--sub);
-    }
-
-    .credit-box p + p {
-      margin-top: 8px;
-    }
-
-    .credit-box strong {
-      color: var(--ink);
-    }
-
     footer {
       margin-top: 42px;
       color: var(--muted);
@@ -337,10 +341,6 @@
         display: block;
       }
 
-      .note {
-        margin-top: 6px;
-      }
-
       .album-grid {
         grid-template-columns: 1fr;
       }
@@ -359,7 +359,7 @@
 </head>
 <body>
   <main class="site">
-    <a class="top-link" href="/">← hatagayatei-site top</a>
+    <a class="top-link" href="/music/">← 音楽一覧へ</a>
 
     <header class="hero">
       <figure class="cover">
@@ -410,24 +410,9 @@
     <section class="section" id="tracks" aria-labelledby="tracks-title">
       <div class="section-title">
         <h2 id="tracks-title">Tracks</h2>
-        <p class="note">MP4は <code>tracks</code> フォルダに置く想定です。ダウンロードリンクは表示していません。</p>
       </div>
 
       <section class="track-list" aria-label="楽曲一覧">
-        <!--
-          MP4は以下の場所に置く想定です。
-          music/yoru-ni-odoreba/tracks/
-
-          想定ファイル名：
-          01-saraba-john.mp4
-          02-nagisa-nite.mp4
-          03-kuchibue-no-blues.mp4
-          04-kaze-ga-fuiteiru.mp4
-          05-yoru-ni-odoreba.mp4
-
-          実際のファイル名が異なる場合は、source src を書き換えてください。
-        -->
-
         <article class="track">
           <div class="track-head">
             <div class="track-number">01</div>
@@ -441,6 +426,7 @@
             お使いのブラウザは音声再生に対応していません。
           </audio>
         </article>
+
         <article class="track">
           <div class="track-head">
             <div class="track-number">02</div>
@@ -454,6 +440,7 @@
             お使いのブラウザは音声再生に対応していません。
           </audio>
         </article>
+
         <article class="track">
           <div class="track-head">
             <div class="track-number">03</div>
@@ -467,6 +454,7 @@
             お使いのブラウザは音声再生に対応していません。
           </audio>
         </article>
+
         <article class="track">
           <div class="track-head">
             <div class="track-number">04</div>
@@ -480,6 +468,7 @@
             お使いのブラウザは音声再生に対応していません。
           </audio>
         </article>
+
         <article class="track">
           <div class="track-head">
             <div class="track-number">05</div>

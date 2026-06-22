@@ -89,8 +89,7 @@
       max-width: 860px;
     }
 
-    .eyebrow,
-    .section-badge {
+    .eyebrow {
       display: inline-flex;
       align-items: center;
       width: fit-content;
@@ -105,13 +104,6 @@
       margin-bottom: 22px;
     }
 
-    .section-badge {
-      padding: 5px 13px;
-      color: var(--accent);
-      background: var(--accent-soft);
-      font-size: 0.78rem;
-      margin-bottom: 16px;
-    }
 
     h1 {
       margin: 0;
@@ -126,6 +118,21 @@
       line-height: 1.25;
       letter-spacing: 0.015em;
     }
+
+    .section-title-badge {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 8px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: clamp(1.28rem, 3vw, 2rem);
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
 
     h3 {
       margin: 0;
@@ -174,7 +181,7 @@
 
     .section-header {
       display: flex;
-      align-items: end;
+      align-items: center;
       justify-content: space-between;
       gap: 24px;
       margin-bottom: 24px;
@@ -307,8 +314,7 @@
       <section class="section talk-section" id="2026" aria-labelledby="2026-heading">
         <div class="section-header">
           <div>
-            <span class="section-badge">Archive</span>
-            <h2 id="2026-heading">2026年</h2>
+            <h2 class="section-title-badge" id="2026-heading">2026年</h2>
           </div>
         </div>
         <div class="talk-grid">
@@ -390,8 +396,7 @@
       <section class="section talk-section" id="2025" aria-labelledby="2025-heading">
         <div class="section-header">
           <div>
-            <span class="section-badge">Archive</span>
-            <h2 id="2025-heading">2025年</h2>
+            <h2 class="section-title-badge" id="2025-heading">2025年</h2>
           </div>
         </div>
         <div class="talk-grid">
@@ -455,9 +460,9 @@
       <section class="section talk-section" id="unspoken" aria-labelledby="unspoken-heading">
         <div class="section-header">
           <div>
-            <span class="section-badge">Archive</span>
-            <h2 id="unspoken-heading">未登壇資料</h2>
+            <h2 class="section-title-badge" id="unspoken-heading">未登壇資料</h2>
           </div>
+            <p>登壇前・登壇外で公開している資料です。</p>
         </div>
         <div class="talk-grid">
           <article class="talk-card">
@@ -475,9 +480,9 @@
       <section class="section talk-section" id="tamadev" aria-labelledby="tamadev-heading">
         <div class="section-header">
           <div>
-            <span class="section-badge">Archive</span>
-            <h2 id="tamadev-heading">多摩.dev運営</h2>
+            <h2 class="section-title-badge" id="tamadev-heading">多摩.dev運営</h2>
           </div>
+            <p>多摩.devの運営・案内に関する資料です。</p>
         </div>
         <div class="talk-grid">
           <article class="talk-card">
@@ -549,9 +554,9 @@
       <section class="section talk-section" id="hadano" aria-labelledby="hadano-heading">
         <div class="section-header">
           <div>
-            <span class="section-badge">Archive</span>
-            <h2 id="hadano-heading">秦野アジャイル運営</h2>
+            <h2 class="section-title-badge" id="hadano-heading">秦野アジャイル運営</h2>
           </div>
+            <p>秦野アジャイルの運営・案内に関する資料です。</p>
         </div>
         <div class="talk-grid">
           <article class="talk-card">

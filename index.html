@@ -142,11 +142,11 @@
       letter-spacing: 0.015em;
     }
 
-    .name-part {
+    .name-line {
       white-space: nowrap;
     }
 
-    .name-separator {
+    .name-slash {
       margin: 0 0.08em;
     }
 
@@ -261,6 +261,34 @@
       font-size: 0.92rem;
     }
 
+    @media (max-width: 1080px) {
+      .title-row {
+        display: grid;
+        grid-template-columns: 64px minmax(0, 1fr);
+        gap: 18px;
+        align-items: center;
+      }
+
+      .title-avatar {
+        width: 64px;
+        height: 64px;
+      }
+
+      h1 {
+        font-size: clamp(1.75rem, 8.6vw, 3.8rem);
+        line-height: 1.08;
+      }
+
+      .name-line {
+        display: block;
+        white-space: nowrap;
+      }
+
+      .name-slash {
+        display: none;
+      }
+    }
+
     @media (max-width: 780px) {
       .site {
         width: min(100% - 28px, 720px);
@@ -277,29 +305,13 @@
       }
 
       .title-row {
-        display: grid;
         grid-template-columns: 60px minmax(0, 1fr);
         gap: 16px;
-        align-items: center;
       }
 
       .title-avatar {
         width: 60px;
         height: 60px;
-      }
-
-      h1 {
-        font-size: clamp(2rem, 8.8vw, 3.2rem);
-        line-height: 1.1;
-      }
-
-      .name-part {
-        display: block;
-        white-space: nowrap;
-      }
-
-      .name-separator {
-        display: none;
       }
 
       .cards {
@@ -333,9 +345,9 @@
         <div class="title-row">
           <span class="title-avatar" aria-hidden="true"></span>
           <h1>
-            <span class="name-part">髙橋直規</span>
-            <span class="name-separator">/</span>
-            <span class="name-part">幡ヶ谷亭直吉</span>
+            <span class="name-line">髙橋直規</span>
+            <span class="name-slash">/</span>
+            <span class="name-line">幡ヶ谷亭直吉</span>
           </h1>
         </div>
 

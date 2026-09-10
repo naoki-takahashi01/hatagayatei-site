@@ -209,7 +209,8 @@
     }
 
     .deck-preview iframe,
-    .deck-preview .speakerdeck-iframe {
+    .deck-preview .speakerdeck-iframe,
+    .deck-preview img {
       position: absolute;
       inset: 0;
       width: 100% !important;
@@ -218,6 +219,11 @@
       margin: 0 !important;
       padding: 0 !important;
       background: transparent !important;
+    }
+
+    .deck-preview img {
+      object-fit: cover;
+      display: block;
     }
 
     .talk-body {
@@ -294,7 +300,7 @@
           <a href="#2025">2025年</a>
           <a href="#unspoken">未登壇資料</a>
           <a href="#videos">登壇動画</a>
-          <a href="#podcasts">Podcast</a>
+          <a href="#podcasts">Podcast出演</a>
           <a href="#tamadev">多摩.dev運営</a>
           <a href="#hadano">秦野アジャイル運営</a>
         </nav>
@@ -740,30 +746,35 @@
       <section class="section talk-section" id="podcasts" aria-labelledby="podcasts-heading">
         <div class="section-header">
           <div>
-            <h2 id="podcasts-heading">Podcast</h2>
+            <h2 id="podcasts-heading">Podcast出演</h2>
           </div>
         </div>
-      
+
         <div class="talk-grid">
           <article class="talk-card">
+            <a
+              class="deck-preview"
+              href="https://fortegp05.github.io/aozorafm/episode/319"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="--deck-ratio:1200/630;"
+              aria-label="aozora.fm #319 高橋さんと楽しいITエンジニア話を聴く"
+            >
+              <img
+                src="https://pbs.twimg.com/media/HNrd7LEaoAAorSd?format=jpg&amp;name=medium"
+                alt="aozora.fm #319 高橋さんと楽しいITエンジニア話"
+                loading="lazy"
+              >
+            </a>
+
             <div class="talk-body">
               <p class="talk-meta">2026.05.31 / aozora.fm #319</p>
               <h3>高橋さんと楽しいITエンジニア話</h3>
-              <p>
-                ITエンジニアとしての成長、ドメイン知識、
-                プロダクトエンジニアリング、そして「怖さ」について話しました。
-              </p>
-              <p>
-                <a href="https://fortegp05.github.io/aozorafm/episode/319"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  エピソードを聴く →
-                </a>
-              </p>
             </div>
           </article>
         </div>
       </section>
+
       <section class="section talk-section" id="tamadev" aria-labelledby="tamadev-heading">
         <div class="section-header">
           <div>

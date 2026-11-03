@@ -4,14 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>いぬのあんこのいちにち／娘が描いたマンガを豆本に | 幡ヶ谷亭直吉</title>
-  <meta name="description" content="6歳の娘が自分で作った紙の本に描いた、犬のあんこの一日。手描きの絵と言葉をそのまま生かして、小さな豆本にしました。">
+  <meta name="description" content="6歳の娘が自分で作った紙の本に描いた、犬のあんこの一日。手描きの絵と言葉を生かして、小さな豆本にしました。頒布価格1,000円。アニメーション版も公開しています。">
   <link rel="canonical" href="https://hatagayatei.com/doujinshi/inu-no-anko-no-ichinichi/">
 
   <meta property="og:site_name" content="髙橋直規 / 幡ヶ谷亭直吉">
   <meta property="og:type" content="website">
   <meta property="og:title" content="いぬのあんこのいちにち／娘が描いたマンガを豆本に | 幡ヶ谷亭直吉">
-  <meta property="og:description" content="6歳の娘が自分で作った紙の本に描いた、犬のあんこの一日。手描きの絵と言葉をそのまま生かして、小さな豆本にしました。">
+  <meta property="og:description" content="6歳の娘が描いた犬のあんこの一日を、小さな豆本にしました。頒布価格1,000円。アニメーション版も公開しています。">
   <meta property="og:url" content="https://hatagayatei.com/doujinshi/inu-no-anko-no-ichinichi/">
   <meta property="og:image" content="https://hatagayatei.com/ogp/default.jpg">
   <meta property="og:image:width" content="1200">
@@ -20,7 +21,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="いぬのあんこのいちにち／娘が描いたマンガを豆本に | 幡ヶ谷亭直吉">
-  <meta name="twitter:description" content="6歳の娘が自分で作った紙の本に描いた、犬のあんこの一日。手描きの絵と言葉をそのまま生かして、小さな豆本にしました。">
+  <meta name="twitter:description" content="6歳の娘が描いた犬のあんこの一日を、小さな豆本にしました。頒布価格1,000円。アニメーション版も公開しています。">
   <meta name="twitter:image" content="https://hatagayatei.com/ogp/default.jpg">
   <meta name="twitter:image:alt" content="いぬのあんこのいちにち | 幡ヶ谷亭直吉">
 
@@ -49,9 +50,14 @@
     body {
       margin: 0;
       color: var(--ink);
-      font-family: -apple-system, BlinkMacSystemFont,
-        "Hiragino Sans", "Yu Gothic", "YuGothic",
-        "Noto Sans JP", sans-serif;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Hiragino Sans",
+        "Yu Gothic",
+        "YuGothic",
+        "Noto Sans JP",
+        sans-serif;
       line-height: 1.8;
       letter-spacing: 0.02em;
       background:
@@ -212,6 +218,29 @@
       margin-bottom: 0;
     }
 
+    .video-item + .video-item {
+      margin-top: 42px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    .video-item h3 {
+      margin: 0 0 14px;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      max-width: 760px;
+      height: auto;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #000;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+    }
+
     .meta-list {
       display: grid;
       grid-template-columns: 160px 1fr;
@@ -303,6 +332,7 @@
   <div class="site">
     <header>
       <a class="brand" href="/">髙橋直規 / 幡ヶ谷亭直吉</a>
+
       <nav aria-label="主要ナビゲーション">
         <a href="/writing/">普段書いている場所</a>
         <a href="/doujinshi/" aria-current="page">同人誌</a>
@@ -314,47 +344,79 @@
 
     <main>
       <section class="hero">
-        <div class="eyebrow">Mini Book</div>
+        <div class="eyebrow">Doujinshi / Mini Book</div>
+
         <h1>いぬのあんこのいちにち</h1>
+
         <p class="lead">
           6歳の娘が、犬のあんこの一日を描いたマンガ。<br>
           娘が自分で作った紙の本を、小さな豆本にしました。
         </p>
+
         <div class="button-row">
-          <a class="button secondary" href="/doujinshi/">同人誌一覧へ</a>
+          <a class="button secondary" href="/doujinshi/">
+            同人誌一覧へ
+          </a>
         </div>
       </section>
 
       <section class="section">
         <h2>書影</h2>
+
         <figure class="cover-figure">
           <img
             class="cover-image"
             src="./cover.png"
             alt="娘の手書きのタイトルと犬のあんこが描かれた『いぬのあんこのいちにち』の表紙"
             loading="lazy"
-            width="477"
-            height="630"
           >
         </figure>
       </section>
 
       <section class="section">
         <h2>アニメーション版</h2>
+
         <div class="media-block">
           <p>
-            本に描かれたあんこの一日をもとに、
-            アニメーションも作りました。
+            娘が描いたあんこの一日をもとに、
+            AIを使ってアニメーションも作りました。<br>
+            フル版とショート版の2種類を公開しています。
+            よろしければ、あわせてご覧ください。
           </p>
-          <p>
-            書籍の中には、フル版とショート版の動画につながる
-            QRコードを収録しています。
-          </p>
+
+          <div class="video-item">
+            <h3>フル版</h3>
+
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              aria-label="いぬのあんこのいちにち アニメーション フル版"
+            >
+              <source src="./anko.mp4" type="video/mp4">
+              お使いのブラウザでは動画を再生できません。
+            </video>
+          </div>
+
+          <div class="video-item">
+            <h3>ショート版</h3>
+
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              aria-label="いぬのあんこのいちにち アニメーション ショート版"
+            >
+              <source src="./short-anko.mp4" type="video/mp4">
+              お使いのブラウザでは動画を再生できません。
+            </video>
+          </div>
         </div>
       </section>
 
       <section class="section">
         <h2>本について</h2>
+
         <dl class="meta-list">
           <dt>タイトル</dt>
           <dd>いぬのあんこのいちにち</dd>
@@ -368,6 +430,12 @@
           <dt>ジャンル</dt>
           <dd>豆本 / マンガ / 親子制作</dd>
 
+          <dt>ページ数</dt>
+          <dd>30ページ</dd>
+
+          <dt>頒布価格</dt>
+          <dd>1,000円</dd>
+
           <dt>初頒布</dt>
           <dd>技術書典21（2026年11月23日）</dd>
 
@@ -378,14 +446,17 @@
 
       <section class="section">
         <h2>紹介文</h2>
+
         <div class="text-block">
           <p>
-            『いぬのあんこのいちにち』は、6歳の娘が描いた
-            犬のあんこの日常を、小さな豆本にした作品です。
+            『いぬのあんこのいちにち』は、
+            6歳の娘が描いた犬のあんこの日常を、
+            小さな豆本にした作品です。
             お散歩をしたり、ごはんを食べたり、眠ったり。
             娘の目に映るあんこの一日が、
             手描きの絵と言葉でつづられています。
           </p>
+
           <p>
             娘は学校の友だちから紙の本の作り方を教わり、
             紙を折って、切って、テープでつないで、
@@ -394,6 +465,7 @@
             絵や文字の雰囲気をできるだけ残して
             一冊の本にまとめています。
           </p>
+
           <p>
             巻末には、娘の手作りマンガの原本や、
             豆本にするまでの制作の背景も収録しました。

@@ -1,9 +1,412 @@
 
-          <video controls playsinline preload="metadata" poster="./poster.jpg">
-            <source src="./short-anko.mp4" type="video/mp4">
-            お使いのブラウザでは動画を再生できません。
-          </video>
-          <video controls playsinline preload="metadata" poster="./poster.jpg">
-            <source src="./anko.mp4" type="video/mp4">
-            お使いのブラウザでは動画を再生できません。
-          </video>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>いぬのあんこのいちにち／娘が描いたマンガを豆本に | 幡ヶ谷亭直吉</title>
+  <meta name="description" content="6歳の娘が自分で作った紙の本に描いた、犬のあんこの一日。手描きの絵と言葉をそのまま生かして、小さな豆本にしました。">
+  <link rel="canonical" href="https://hatagayatei.com/doujinshi/inu-no-anko-no-ichinichi/">
+
+  <meta property="og:site_name" content="髙橋直規 / 幡ヶ谷亭直吉">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="いぬのあんこのいちにち／娘が描いたマンガを豆本に | 幡ヶ谷亭直吉">
+  <meta property="og:description" content="6歳の娘が自分で作った紙の本に描いた、犬のあんこの一日。手描きの絵と言葉をそのまま生かして、小さな豆本にしました。">
+  <meta property="og:url" content="https://hatagayatei.com/doujinshi/inu-no-anko-no-ichinichi/">
+  <meta property="og:image" content="https://hatagayatei.com/ogp/default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="いぬのあんこのいちにち | 幡ヶ谷亭直吉">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="いぬのあんこのいちにち／娘が描いたマンガを豆本に | 幡ヶ谷亭直吉">
+  <meta name="twitter:description" content="6歳の娘が自分で作った紙の本に描いた、犬のあんこの一日。手描きの絵と言葉をそのまま生かして、小さな豆本にしました。">
+  <meta name="twitter:image" content="https://hatagayatei.com/ogp/default.jpg">
+  <meta name="twitter:image:alt" content="いぬのあんこのいちにち | 幡ヶ谷亭直吉">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root {
+      --bg: #f7f3ea;
+      --paper: rgba(255, 253, 247, 0.92);
+      --ink: #1f2a35;
+      --muted: #65717e;
+      --line: rgba(126, 91, 54, 0.22);
+      --accent: #805531;
+      --accent-soft: #eee2d4;
+      --shadow: 0 14px 30px rgba(77, 63, 45, 0.08);
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Hiragino Sans", "Yu Gothic", "YuGothic",
+        "Noto Sans JP", sans-serif;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+      background:
+        linear-gradient(rgba(126, 91, 54, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126, 91, 54, 0.055) 1px, transparent 1px),
+        var(--bg);
+      background-size: 42px 42px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 34px 0 56px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 70px;
+    }
+
+    .brand {
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+
+    nav a {
+      text-decoration: none;
+    }
+
+    nav a[aria-current="page"],
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      max-width: 860px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 247, 0.6);
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.35rem, 6.2vw, 4.4rem);
+      line-height: 1.18;
+      letter-spacing: 0.015em;
+    }
+
+    .lead {
+      margin: 30px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.04rem, 2.2vw, 1.26rem);
+      line-height: 1.95;
+      font-weight: 600;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      color: var(--accent);
+      border: 1px solid rgba(128, 85, 49, 0.45);
+      background: rgba(255, 253, 247, 0.68);
+    }
+
+    .section {
+      margin-top: 64px;
+    }
+
+    .section h2 {
+      margin: 0 0 24px;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.25;
+    }
+
+    .cover-figure {
+      margin: 0;
+      max-width: 360px;
+    }
+
+    .cover-image {
+      display: block;
+      width: min(100%, 360px);
+      height: auto;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+      background: #fff;
+    }
+
+    .media-block,
+    .text-block {
+      max-width: 860px;
+      padding: clamp(26px, 4vw, 36px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .media-block p,
+    .text-block p {
+      margin: 0 0 1.25em;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.1vw, 1.06rem);
+      line-height: 2;
+      font-weight: 600;
+    }
+
+    .media-block p:last-child,
+    .text-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .meta-list {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 0;
+      max-width: 760px;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .meta-list dt,
+    .meta-list dd {
+      margin: 0;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-list dt {
+      color: var(--accent);
+      font-weight: 900;
+      background: rgba(238, 226, 212, 0.56);
+    }
+
+    .meta-list dd {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-list dt:last-of-type,
+    .meta-list dd:last-of-type {
+      border-bottom: none;
+    }
+
+    footer {
+      margin-top: 86px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 780px) {
+      .site {
+        width: min(100% - 28px, 720px);
+        padding-top: 24px;
+      }
+
+      header {
+        display: block;
+        margin-bottom: 54px;
+      }
+
+      nav {
+        margin-top: 14px;
+      }
+
+      .button-row {
+        display: grid;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .meta-list {
+        grid-template-columns: 1fr;
+      }
+
+      .meta-list dt {
+        border-bottom: none;
+        padding-bottom: 4px;
+      }
+
+      .meta-list dd {
+        padding-top: 4px;
+      }
+
+      .meta-list dt:last-of-type {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site">
+    <header>
+      <a class="brand" href="/">髙橋直規 / 幡ヶ谷亭直吉</a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="/writing/">普段書いている場所</a>
+        <a href="/doujinshi/" aria-current="page">同人誌</a>
+        <a href="/talks/">登壇</a>
+        <a href="/communities/">コミュニティ</a>
+        <a href="/music/">音楽</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Doujinshi / Mini Book</div>
+        <h1>いぬのあんこのいちにち</h1>
+        <p class="lead">
+          6歳の娘が、犬のあんこの一日を描いたマンガ。<br>
+          娘が自分で作った紙の本を、小さな豆本にしました。
+        </p>
+        <div class="button-row">
+          <a class="button secondary" href="/doujinshi/">同人誌一覧へ</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>書影</h2>
+        <figure class="cover-figure">
+          <img
+            class="cover-image"
+            src="./cover.jpg"
+            alt="娘の手書きのタイトルと犬のあんこが描かれた『いぬのあんこのいちにち』の表紙"
+            loading="lazy"
+            width="477"
+            height="630"
+          >
+        </figure>
+      </section>
+
+      <section class="section">
+        <h2>アニメーション版</h2>
+        <div class="media-block">
+          <p>
+            本に描かれたあんこの一日をもとに、
+            アニメーションも作りました。
+          </p>
+          <p>
+            書籍の中には、フル版とショート版の動画につながる
+            QRコードを収録しています。
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>本について</h2>
+        <dl class="meta-list">
+          <dt>タイトル</dt>
+          <dd>いぬのあんこのいちにち</dd>
+
+          <dt>作・絵</dt>
+          <dd>たかはしここね</dd>
+
+          <dt>編集</dt>
+          <dd>幡ヶ谷亭直吉</dd>
+
+          <dt>ジャンル</dt>
+          <dd>豆本 / マンガ / 親子制作</dd>
+
+          <dt>初頒布</dt>
+          <dd>技術書典21（2026年11月23日）</dd>
+
+          <dt>印刷</dt>
+          <dd>プリントオン</dd>
+        </dl>
+      </section>
+
+      <section class="section">
+        <h2>紹介文</h2>
+        <div class="text-block">
+          <p>
+            『いぬのあんこのいちにち』は、6歳の娘が描いた
+            犬のあんこの日常を、小さな豆本にした作品です。
+            お散歩をしたり、ごはんを食べたり、眠ったり。
+            娘の目に映るあんこの一日が、
+            手描きの絵と言葉でつづられています。
+          </p>
+          <p>
+            娘は学校の友だちから紙の本の作り方を教わり、
+            紙を折って、切って、テープでつないで、
+            自分で冊子を作りました。
+            その冊子に描いたマンガをもとに、
+            絵や文字の雰囲気をできるだけ残して
+            一冊の本にまとめています。
+          </p>
+          <p>
+            巻末には、娘の手作りマンガの原本や、
+            豆本にするまでの制作の背景も収録しました。
+            前作『ぺんぎんとかえる』に続く、
+            娘の本づくりから生まれた一冊です。
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 髙橋直規 / 幡ヶ谷亭直吉
+    </footer>
+  </div>
+</body>
+</html>
